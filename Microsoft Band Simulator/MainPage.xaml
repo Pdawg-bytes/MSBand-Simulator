@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Microsoft_Band_Simulator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft_Band_Simulator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <Grid x:Name="grid" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
+            <Image Source="ms-appx:///Assets/mslogo.png" Height="20" Width="20" Margin="0,-15,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Image Source="ms-appx:///Assets/band2.svg" Height="900"/>
+            <CommandBar Background="Transparent" DefaultLabelPosition="Right" HorizontalAlignment="Center">
+                <AppBarButton Icon="Play" Label="Power on" Click="StartButton_Click" x:Name="pwon" />
+                <AppBarButton Icon="Stop" Label="Power off" Click="OffButton_Click" x:Name="pwoff"/>
+                <AppBarButton Icon="Setting" Label="Device settings"/>
+            </CommandBar>
+        </StackPanel>
+        <Frame x:Name="Band2Frame" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="254" Width="680.5" Margin="-4.5,-40,0,0"/>
+    </Grid>
+</Page>
