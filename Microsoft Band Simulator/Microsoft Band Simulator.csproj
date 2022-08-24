@@ -122,6 +122,9 @@
     <Compile Include="Band2.xaml.cs">
       <DependentUpon>Band2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeviceSettings.xaml.cs">
+      <DependentUpon>DeviceSettings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -133,8 +136,29 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\back_overlay.png" />
     <Content Include="Assets\band2.svg" />
     <Content Include="Assets\cargo_fiber.png" />
+    <Content Include="Assets\Icons\alarm.png" />
+    <Content Include="Assets\Icons\bike.png" />
+    <Content Include="Assets\Icons\calendar.png" />
+    <Content Include="Assets\Icons\calls.png" />
+    <Content Include="Assets\Icons\cortana.png" />
+    <Content Include="Assets\Icons\email.png" />
+    <Content Include="Assets\Icons\exercise.png" />
+    <Content Include="Assets\Icons\facebook.png" />
+    <Content Include="Assets\Icons\facebookmessenger.png" />
+    <Content Include="Assets\Icons\finance.png" />
+    <Content Include="Assets\Icons\guidedworkouts.png" />
+    <Content Include="Assets\Icons\lync.png" />
+    <Content Include="Assets\Icons\messaging.png" />
+    <Content Include="Assets\Icons\notificationcenter.png" />
+    <Content Include="Assets\Icons\run.png" />
+    <Content Include="Assets\Icons\sleep.png" />
+    <Content Include="Assets\Icons\starbucks.png" />
+    <Content Include="Assets\Icons\twitter.png" />
+    <Content Include="Assets\Icons\uv.png" />
+    <Content Include="Assets\Icons\weather.png" />
     <Content Include="Assets\mslogo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -151,6 +175,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Band2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceSettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

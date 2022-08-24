@@ -9,7 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Image Source="ms-appx:///Assets/cargo_fiber.png"/>
-        <TextBlock x:Name="time"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled">
+            <Grid VerticalAlignment="Center" Margin="-70,0,0,0">
+                <Image Source="ms-appx:///Assets/cargo_fiber.png" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Height="260" Margin="70,0,0,0"/>
+                <Rectangle Fill="BlueViolet" Height="260" Width="200" Margin="735,0,635,0"/>
+                <Rectangle Fill="BlueViolet" Height="260" Width="200" Margin="940,0,430,0"/>
+                <Rectangle Fill="BlueViolet" Height="260" Width="200" Margin="1145,0,225,0"/>
+                <Rectangle Fill="BlueViolet" Height="260" Margin="1352,0,10,0"/>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Microsoft_Band_Simulator.DeviceSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft_Band_Simulator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid x:Name="settings_grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
+            <Image Source="ms-appx:///Assets/mslogo.png" Height="20" Width="20" Margin="0,-15,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,0">
+            <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  Header="Select the device theme" PlaceholderText="Theme" Width="200" x:Name="ThemeComboBox">
+                <x:String>Microsoft Blue</x:String>
+                <x:String>Dark Cyan</x:String>
+                <x:String>Teal</x:String>
+                <x:String>Light Green</x:String>
+                <x:String>Yellow Green</x:String>
+                <x:String>Yellow</x:String>
+                <x:String>Orange</x:String>
+                <x:String>Red</x:String>
+                <x:String>Hot Pink</x:String>
+                <x:String>Magenta</x:String>
+                <x:String>Purple</x:String>
+            </ComboBox>
+            <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
+            <ComboBox IsEditable="True" Width="200" x:Name="BatteryPercent" PlaceholderText="Type a number, 0-100" Margin="0,30,0,0" Header="Device battery percentage"/>
+            <Rectangle x:Name="ColorTheme" Width="50" Height="60" Margin="0,30,0,0"/>
+        </StackPanel>
+        <GridView
+            x:Name="WallpaperGridView"
+            IsItemClickEnabled="True"
+            CanDragItems="False"
+            AllowDrop="False"
+            CanReorderItems="False"
+            SelectionMode="Single"
+            FlowDirection="LeftToRight"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Row="1"
+            Margin="0,0,0,0"/>
+
+        <Button Content="Save" x:Name="SaveButton" Style="{ThemeResource AccentButtonStyle}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="100,0,0,40" Click="SaveButton_Click"/>
+        <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,100,40" Click="Back_Click"/>
+    </Grid>
+</Page>
