@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
+using Windows.ApplicationModel.VoiceCommands;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -75,11 +76,37 @@ namespace Microsoft_Band_Simulator
                 
                 // Add acrylic to TitleBar
                 ExtendAcrylicIntoTitleBar();
+
+                // Forces Full Screen
+                TryFullScreen();
+
             }
 
         }
+
+        private void TryFullScreen()
+        {
+            var view = ApplicationView.GetForCurrentView();
+            if (view.IsFullScreenMode)
+            {
+                view.ExitFullScreenMode();
+                ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.Auto;
+                // The SizeChanged event will be raised when the exit from full-screen mode is complete.
+            }
+            else
+            {
+                if (view.TryEnterFullScreenMode())
+                {
+                    ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+                    // The SizeChanged event will be raised when the entry to full-screen mode is complete.
+                }
+            }
+        }
+
+        // Extend Acrylic Into Titlebar Function
         private void ExtendAcrylicIntoTitleBar()
         {
+            // Extends contentarea into titlebar and hides the old bar
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ButtonBackgroundColor = Colors.Transparent;

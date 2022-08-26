@@ -154,6 +154,7 @@
     <Content Include="Assets\Icons\messaging.png" />
     <Content Include="Assets\Icons\notificationcenter.png" />
     <Content Include="Assets\Icons\run.png" />
+    <Content Include="Assets\Icons\settings.png" />
     <Content Include="Assets\Icons\sleep.png" />
     <Content Include="Assets\Icons\starbucks.png" />
     <Content Include="Assets\Icons\twitter.png" />
@@ -194,6 +195,9 @@
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.1.190606001</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Wallpapers\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

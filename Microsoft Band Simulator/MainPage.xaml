@@ -5,8 +5,7 @@
     xmlns:local="using:Microsoft_Band_Simulator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    >
+    mc:Ignorable="d">
 
     <Grid x:Name="grid" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
         <Grid.RowDefinitions>
@@ -19,16 +18,16 @@
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <Image Source="ms-appx:///Assets/band2.svg" Height="900"/>
-            <CommandBar Background="Transparent" DefaultLabelPosition="Right" HorizontalAlignment="Center">
-                <AppBarButton Icon="Play" Label="Power on" Click="StartButton_Click" x:Name="pwon" />
-                <AppBarButton Icon="Stop" Label="Power off" Click="OffButton_Click" x:Name="pwoff"/>
-                <AppBarButton Icon="Setting" Label="Device settings" Click="DevSettingsButton_Click"/>
-            </CommandBar>
         </StackPanel>
-        <Frame x:Name="Band2Frame" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="254" Width="680.5" Margin="-4.5,-40,0,0">
+        <CommandBar Background="Transparent" DefaultLabelPosition="Right" HorizontalAlignment="Center" Grid.Row="1">
+            <AppBarButton Icon="Play" Label="Power on" Click="StartButton_Click" x:Name="pwon" />
+            <AppBarButton Icon="Stop" Label="Power off" Click="OffButton_Click" x:Name="pwoff"/>
+            <AppBarButton Icon="Setting" Label="Device settings" Click="DevSettingsButton_Click"/>
+        </CommandBar>
+        <Frame x:Name="Band2Frame" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="254" Width="686" Margin="0,0,0,0" MinHeight="254" MinWidth="686">
             <Frame.ContentTransitions>
                 <TransitionCollection>
-                    <NavigationThemeTransition  />
+                    <NavigationThemeTransition/>
                 </TransitionCollection>
             </Frame.ContentTransitions>
         </Frame>
