@@ -140,6 +140,7 @@
     <Content Include="Assets\band2.svg" />
     <Content Include="Assets\cargo_fiber.png" />
     <Content Include="Assets\Icons\alarm.png" />
+    <Content Include="Assets\Icons\battery.png" />
     <Content Include="Assets\Icons\bike.png" />
     <Content Include="Assets\Icons\calendar.png" />
     <Content Include="Assets\Icons\calls.png" />

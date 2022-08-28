@@ -32,9 +32,9 @@
                 <x:String>Purple</x:String>
             </ComboBox>
             <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
-            <ComboBox IsEditable="True" Width="200" x:Name="BatteryPercent" PlaceholderText="Type a number, 0-100" Margin="0,30,0,0" Header="Device battery percentage"/>
-            <Rectangle x:Name="ColorTheme" Width="50" Height="60" Margin="0,30,0,0"/>
+            <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
         </StackPanel>
+        <Rectangle x:Name="ColorTheme" Margin="241,53,1166,885" Fill="White" Grid.Row="1"/>
         <GridView
             x:Name="WallpaperGridView"
             IsItemClickEnabled="True"

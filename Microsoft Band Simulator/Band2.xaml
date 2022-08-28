@@ -9,21 +9,27 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled">
-            <Grid VerticalAlignment="Center" Margin="-70,0,0,0">
-                <Image Source="ms-appx:///Assets/cargo_fiber.png" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Height="260" Margin="70,0,0,0"/>
-                <Rectangle Fill="BlueViolet" Height="260" Width="200" Margin="735,0,635,0"/>
-                <Image Source="ms-appx:///Assets/Icons/uv.png" VerticalAlignment="Center" Height="100" Width="100" Margin="44,0,-44,0"/>
-                <Rectangle Fill="BlueViolet" Height="260" Width="200" Margin="940,0,430,0"/>
-                <Image Source="ms-appx:///Assets/Icons/alarm.png" VerticalAlignment="Center" Height="100" Width="100" Margin="990,0,480,0"/>
-                <Rectangle Fill="BlueViolet" Height="260" Width="200" Margin="1145,0,225,0"/>
-                <Image Source="ms-appx:///Assets/Icons/sleep.png" VerticalAlignment="Center" Height="100" Width="100" Margin="1195,0,275,0"/>
-                <Rectangle Fill="BlueViolet" Height="260" Margin="1350,0,0,0"/>
-                <Image Source="ms-appx:///Assets/Icons/settings.png" VerticalAlignment="Center" Height="90" Width="90" Margin="1410,0,60,0"/>
-                <Button x:Name="UVOpen" Margin="765,0,0,0" Height="260" Width="170" Visibility="Collapsed"/>
-                <Button x:Name="AlarmOpen" Margin="940,0,0,0" Height="260" Width="200" Visibility="Collapsed"/>
-                <Button x:Name="SleepOpen" Margin="1145,0,0,0" Height="260" Width="200" Visibility="Collapsed"/>
-                <Button x:Name="SettingOpen" Margin="1350,0,0,0" Height="260" Width="220" Visibility="Collapsed"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="517*"/>
+            <RowDefinition Height="483*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Band2view" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Loaded="ScrollViewer_Loaded" ViewChanged="Band2view_ViewChanged">
+            <Grid VerticalAlignment="Center" Margin="0,0,0,0">
+                <ProgressBar x:Name="batteryPercent" Height="13" Width="31"  Value="100" HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top" x:FieldModifier="Public" Foreground="White" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <ProgressBar.RenderTransform>
+                        <CompositeTransform Rotation="-90" ScaleY="-1"/>
+                    </ProgressBar.RenderTransform>
+                </ProgressBar>
+                <Image Source="ms-appx:///Assets/Icons/battery.png" HorizontalAlignment="Left" Margin="13,27,0,184" Width="42"/>
+                <Image Source="ms-appx:///Assets/cargo_fiber.png" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Height="260" Margin="45,0,0,0"/>
+                <Rectangle Height="260" Margin="720,0,652,0" x:Name="Tile1"/>
+                <Image Source="ms-appx:///Assets/Icons/uv.png" VerticalAlignment="Center" Height="100" Width="100" Margin="769,0,701,0"/>
+                <Rectangle Height="260" Margin="923,0,431,0" x:Name="Tile2"/>
+                <Image Source="ms-appx:///Assets/Icons/alarm.png" VerticalAlignment="Center" Height="100" Width="100" Margin="981,0,489,0"/>
+                <Rectangle Height="260" Margin="1144,0,220,0" x:Name="Tile3"/>
+                <Image Source="ms-appx:///Assets/Icons/sleep.png" VerticalAlignment="Center" Height="100" Width="100" Margin="1197,0,273,0"/>
+                <Rectangle Height="260" Margin="1355,0,0,0" x:Name="Tile4"/>
+                <Image Source="ms-appx:///Assets/Icons/settings.png" VerticalAlignment="Center" Height="90" Width="90" Margin="1418,0,62,0"/>
             </Grid>
         </ScrollViewer>
     </Grid>

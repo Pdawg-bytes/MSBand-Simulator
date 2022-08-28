@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using System.Diagnostics;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
@@ -32,46 +33,44 @@ namespace Microsoft_Band_Simulator
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string themeName = e.AddedItems[0].ToString();
-            Color theme;
             switch (themeName)
             {
                 case "Microsoft Blue":
                 default:
-                    theme = Colors.DeepSkyBlue;
+                    Band2.devtheme = Colors.DeepSkyBlue;
                     break;
                 case "Dark Cyan":
-                    theme = Colors.DarkCyan;
+                    Band2.devtheme = Colors.DarkCyan;
                     break;
                 case "Teal":
-                    theme = Colors.Teal;
+                    Band2.devtheme = Colors.Teal;
                     break;
                 case "Light Green":
-                    theme = Colors.LimeGreen;
+                    Band2.devtheme = Colors.LimeGreen;
                     break;
                 case "Yellow Green":
-                    theme = Colors.YellowGreen;
+                    Band2.devtheme = Colors.YellowGreen;
                     break;
                 case "Yellow":
-                    theme = Colors.Yellow;
+                    Band2.devtheme = Colors.Yellow;
                     break;
                 case "Orange":
-                    theme = Colors.Orange;
+                    Band2.devtheme = Colors.Orange;
                     break;
                 case "Red":
-                    theme = Colors.Red;
+                    Band2.devtheme = Colors.Red;
                     break;
                 case "Hot Pink":
-                    theme = Colors.HotPink;
+                    Band2.devtheme = Colors.HotPink;
                     break;
                 case "Magenta":
-                    theme = Colors.DarkMagenta;
+                    Band2.devtheme = Colors.DarkMagenta;
                     break;
                 case "Purple":
-                    theme = Colors.BlueViolet;
+                    Band2.devtheme = Colors.BlueViolet;
                     break;
 
             }
-            ColorTheme.Fill = new SolidColorBrush(theme);
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -88,6 +87,11 @@ namespace Microsoft_Band_Simulator
         private void DeviceName_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void BatteryPercentSet_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            Band2.battery = Convert.ToInt32(e.NewValue);
         }
     }
 }
