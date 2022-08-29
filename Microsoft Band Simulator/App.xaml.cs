@@ -77,6 +77,12 @@ namespace Microsoft_Band_Simulator
                 // Add acrylic to TitleBar
                 ExtendAcrylicIntoTitleBar();
 
+                // Setting Band defaults
+                // Setting defaults
+                Band2.devtheme = Colors.DeepSkyBlue;
+                UV.devtheme = Colors.DeepSkyBlue;
+                Band2.battery = 100;
+
             }
         }
 

@@ -30,6 +30,10 @@
                 <Image Source="ms-appx:///Assets/Icons/sleep.png" VerticalAlignment="Center" Height="100" Width="100" Margin="1197,0,273,0"/>
                 <Rectangle Height="260" Margin="1355,0,0,0" x:Name="Tile4"/>
                 <Image Source="ms-appx:///Assets/Icons/settings.png" VerticalAlignment="Center" Height="90" Width="90" Margin="1418,0,62,0"/>
+                <Button x:Name="UVOpen" Height="261" Width="178" Margin="740,0,0,0" Click="UVOpen_Click"/>
+                <Button x:Name="AlarmOpen" Height="261" Width="216" Margin="923,0,0,0"/>
+                <Button x:Name="SleepOpen" Height="261" Width="206" Margin="1144,0,0,0"/>
+                <Button x:Name="SettingOpen" Height="261" Width="215" Margin="1356,0,0,0"/>
             </Grid>
         </ScrollViewer>
     </Grid>

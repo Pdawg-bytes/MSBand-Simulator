@@ -38,36 +38,47 @@ namespace Microsoft_Band_Simulator
                 case "Microsoft Blue":
                 default:
                     Band2.devtheme = Colors.DeepSkyBlue;
+                    UV.devtheme = Colors.DeepSkyBlue;
                     break;
                 case "Dark Cyan":
                     Band2.devtheme = Colors.DarkCyan;
+                    UV.devtheme = Colors.DarkCyan;
                     break;
                 case "Teal":
                     Band2.devtheme = Colors.Teal;
+                    UV.devtheme = Colors.Teal;
                     break;
                 case "Light Green":
                     Band2.devtheme = Colors.LimeGreen;
+                    UV.devtheme = Colors.LimeGreen;
                     break;
                 case "Yellow Green":
                     Band2.devtheme = Colors.YellowGreen;
+                    UV.devtheme = Colors.YellowGreen;
                     break;
                 case "Yellow":
                     Band2.devtheme = Colors.Yellow;
+                    UV.devtheme = Colors.Yellow;
                     break;
                 case "Orange":
                     Band2.devtheme = Colors.Orange;
+                    UV.devtheme = Colors.Orange;
                     break;
                 case "Red":
                     Band2.devtheme = Colors.Red;
+                    UV.devtheme = Colors.Red;
                     break;
                 case "Hot Pink":
                     Band2.devtheme = Colors.HotPink;
+                    UV.devtheme = Colors.HotPink;
                     break;
                 case "Magenta":
                     Band2.devtheme = Colors.DarkMagenta;
+                    UV.devtheme = Colors.DarkMagenta;
                     break;
                 case "Purple":
                     Band2.devtheme = Colors.BlueViolet;
+                    UV.devtheme = Colors.BlueViolet;
                     break;
 
             }

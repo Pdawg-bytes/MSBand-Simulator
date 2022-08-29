@@ -15,6 +15,8 @@ using System.Diagnostics;
 using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
 using Windows.UI;
+using Windows.UI.Xaml.Media.Animation;
+using Microsoft_Band_Simulator;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -72,6 +74,11 @@ namespace Microsoft_Band_Simulator
                     #pragma warning restore CS0618 // Type or member is obsolete
                 }
             }
+        }
+
+        private void UVOpen_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UV), null, new DrillInNavigationTransitionInfo());
         }
     }
 }
