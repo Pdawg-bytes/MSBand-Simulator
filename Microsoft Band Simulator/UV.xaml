@@ -16,9 +16,12 @@
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="UVview" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Loaded="UVview_Loaded" Margin="60,0,0,0">
             <Grid Margin="0,0,0,0" Width="1360">
                 <TextBlock x:Name="P1Label" HorizontalAlignment="Left" TextWrapping="Wrap" Text="UV Level" VerticalAlignment="Top" Height="60" Width="180" FontSize="40" IsColorFontEnabled="True" Margin="20,10,0,0"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Press the action button to check the UV level." FontSize="47" Margin="20,50,0,0" Width="490"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Press the action button to check the UV level." FontSize="47" Margin="20,80,0,0" Width="490"/>
                 <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Exposure Reminder" x:Name="P2Label" FontSize="40" Height="60" VerticalAlignment="Top" Margin="40,10,0,0"/>
-                <Button x:Name="UVToggle" VerticalAlignment="Top" Margin="530,90,0,0" CornerRadius="210" Height="80" Width="80"/>
+                <ToggleButton x:Name="UVToggle" VerticalAlignment="Top" Margin="530,110,0,0" CornerRadius="210" Height="100" Width="100" Checked="UVToggle_Checked" Unchecked="UVToggle_Unchecked">
+                    <Image x:Name="image" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="80" Source="ms-appx:///Assets/Icons/UV.png"/>
+                </ToggleButton>
+                <TextBlock x:Name="ToggleText" VerticalAlignment="Top" Text="Off" FontSize="80" FontWeight="Bold" HorizontalAlignment="Left" Margin="660,106,0,0"/>
             </Grid>
         </ScrollViewer>
         <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Grid.RowSpan="2" x:Name="UVSidebar"/>
