@@ -140,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\back-arrow.png" />
-    <Content Include="Assets\back_overlay.png" />
     <Content Include="Assets\band2.svg" />
     <Content Include="Assets\cargo_fiber.png" />
     <Content Include="Assets\Icons\alarm.png" />

@@ -35,6 +35,8 @@ namespace Microsoft_Band_Simulator
         private void UVview_Loaded(object sender, RoutedEventArgs e)
         {
             UVSidebar.Fill = new SolidColorBrush(devtheme);
+            P1Label.Foreground = new SolidColorBrush(devtheme);
+            P2Label.Foreground = new SolidColorBrush(devtheme);
         }
     }
 }
