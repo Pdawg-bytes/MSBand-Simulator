@@ -11,6 +11,7 @@ using Windows.ApplicationModel.VoiceCommands;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using System.Timers;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -84,6 +85,12 @@ namespace Microsoft_Band_Simulator
                 UV.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
 
+                // Init clock service
+                DispatcherTimer Timer = new DispatcherTimer();
+                Timer.Tick += DTW_Tick;
+                Timer.Interval = new TimeSpan(1000);
+                Timer.Start();
+
             }
         }
 
@@ -95,6 +102,15 @@ namespace Microsoft_Band_Simulator
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+        }
+
+
+
+        private void DTW_Tick(object sender, object e)
+        {
+            Band2.time = DateTime.Now.ToString("hh:mm");
+            Band2.day = DateTime.Today.Day.ToString("0");
+            Band2.dayname = DateTime.Now.ToString("ddd");
         }
 
         /// <summary>

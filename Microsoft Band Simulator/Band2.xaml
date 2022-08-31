@@ -22,7 +22,11 @@
                 </ProgressBar>
                 <Image Source="ms-appx:///Assets/Icons/battery.png" HorizontalAlignment="Left" Margin="13,26.5,0,184" Width="21" Height="90"/>
                 <Image Source="ms-appx:///Assets/cargo_fiber.png" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Height="260" Margin="45,0,0,0"/>
+                <TextBlock FontSize="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,5,0,0" Height="250" Width="480" x:Name="ClockTime"/>
+                <TextBlock FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="560,105,0,0" x:Name="DayName"/>
+                <TextBlock FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="560,166,0,0" x:Name="Date"/>
                 <Rectangle Height="260" Margin="720,0,652,0" x:Name="Tile1"/>
+                <Rectangle Height="260" Margin="718,0,851,0" VerticalAlignment="Center" x:Name="TranLine" Fill="Black" Width="3"/>
                 <Image Source="ms-appx:///Assets/Icons/uv.png" VerticalAlignment="Center" Height="100" Width="100" Margin="769,0,701,0"/>
                 <Rectangle Height="260" Margin="923,0,431,0" x:Name="Tile2"/>
                 <Image Source="ms-appx:///Assets/Icons/alarm.png" VerticalAlignment="Center" Height="100" Width="100" Margin="981,0,489,0"/>
@@ -30,10 +34,10 @@
                 <Image Source="ms-appx:///Assets/Icons/sleep.png" VerticalAlignment="Center" Height="100" Width="100" Margin="1197,0,273,0"/>
                 <Rectangle Height="260" Margin="1355,0,0,0" x:Name="Tile4"/>
                 <Image Source="ms-appx:///Assets/Icons/settings.png" VerticalAlignment="Center" Height="90" Width="90" Margin="1418,0,62,0"/>
-                <Button x:Name="UVOpen" Height="261" Width="178" Margin="740,0,0,0" Click="UVOpen_Click" Visibility="Visible"/>
-                <Button x:Name="AlarmOpen" Height="261" Width="216" Margin="923,0,0,0" Visibility="Collapsed"/>
-                <Button x:Name="SleepOpen" Height="261" Width="206" Margin="1144,0,0,0" Visibility="Collapsed"/>
-                <Button x:Name="SettingOpen" Height="261" Width="215" Margin="1356,0,0,0" Visibility="Collapsed"/>
+                <Button x:Name="UVOpen" Height="261" Width="178" Margin="740,0,0,0" Click="UVOpen_Click" Opacity="0"/>
+                <Button x:Name="AlarmOpen" Height="261" Width="216" Margin="923,0,0,0" Opacity="0"/>
+                <Button x:Name="SleepOpen" Height="261" Width="206" Margin="1144,0,0,0" Opacity="0"/>
+                <Button x:Name="SettingOpen" Height="261" Width="215" Margin="1356,0,0,0" Opacity="0"/>
             </Grid>
         </ScrollViewer>
     </Grid>

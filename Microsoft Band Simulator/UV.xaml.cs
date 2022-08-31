@@ -40,6 +40,7 @@ namespace Microsoft_Band_Simulator
             UVSidebar.Fill = new SolidColorBrush(devtheme);
             P1Label.Foreground = new SolidColorBrush(devtheme);
             P2Label.Foreground = new SolidColorBrush(devtheme);
+            UVToggle.Background = new SolidColorBrush(Color.FromArgb(100, 56, 52, 52));
         }
 
         private void UVToggle_Checked(object sender, RoutedEventArgs e)
