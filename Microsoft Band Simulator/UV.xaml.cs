@@ -55,5 +55,10 @@ namespace Microsoft_Band_Simulator
             ToggleText.Text = "Off";
             ToggleText.Foreground = new SolidColorBrush(Colors.DarkGray);
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Band2), null, new DrillInNavigationTransitionInfo());
+        }
     }
 }
