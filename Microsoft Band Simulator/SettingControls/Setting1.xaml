@@ -18,8 +18,8 @@
         <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting1view" VerticalScrollMode="Disabled" HorizontalScrollMode="Disabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting1view_Loaded">
             <Grid Margin="0,0,0,0" Width="1400">
-                <ToggleButton x:Name="DNDToggle" VerticalAlignment="Top" Margin="30,110,0,0" CornerRadius="210" Height="130" Width="130">
-                    <Image x:Name="image" HorizontalAlignment="Center" Height="120" VerticalAlignment="Center" Width="120" Source="ms-appx:///Assets/Icons/UV.png"/>
+                <ToggleButton x:Name="DNDToggle" VerticalAlignment="Top" Margin="30,110,0,0" CornerRadius="240" Height="130" Width="130">
+                    <Image x:Name="image" HorizontalAlignment="Center" Height="44" VerticalAlignment="Center" Width="44" Source="ms-appx:///Assets/Icons/UV.png"/>
                 </ToggleButton>
             </Grid>
         </ScrollViewer>
