@@ -102,5 +102,10 @@ namespace Microsoft_Band_Simulator
         {
             this.Frame.Navigate(typeof(UV), null, new DrillInNavigationTransitionInfo());
         }
+
+        private void SettingOpen_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SettingApp), null, new DrillInNavigationTransitionInfo());
+        }
     }
 }

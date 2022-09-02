@@ -24,7 +24,7 @@
                 <ToggleButton x:Name="UVToggle" VerticalAlignment="Top" Margin="530,110,0,0" CornerRadius="210" Height="100" Width="100" Checked="UVToggle_Checked" Unchecked="UVToggle_Unchecked">
                     <Image x:Name="image" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="80" Source="ms-appx:///Assets/Icons/UV.png"/>
                 </ToggleButton>
-                <TextBlock x:Name="ToggleText" VerticalAlignment="Top" Text="Off" FontSize="80" FontWeight="Bold" HorizontalAlignment="Left" Margin="660,106,0,0"/>
+                <TextBlock x:Name="ToggleText" VerticalAlignment="Top" Text="Off" FontSize="80" FontWeight="Bold" HorizontalAlignment="Left" Margin="660,106,0,0" Foreground="DarkGray"/>
                 <TextBlock x:Name="MessageText" VerticalAlignment="Top" FontSize="40" HorizontalAlignment="Right" TextWrapping="WrapWholeWords" Text="Set a UV exposure reminder to keep you informed when you are getting exposure." Height="215" Width="420" Margin="0,10,0,0" />
             </Grid>
         </ScrollViewer>

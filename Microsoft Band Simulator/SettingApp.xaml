@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Microsoft_Band_Simulator.SettingApp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft_Band_Simulator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="517*"/>
+            <RowDefinition Height="483*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Grid.RowSpan="2" x:Name="SettingSidebar"/>
+        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-50,0,0"/>
+        <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Settingview" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Settingview_Loaded">
+            <Grid Margin="0,0,0,0" Width="1400">
+                <Button CornerRadius="75" x:Name="Setting1" VerticalAlignment="Top" Height="140" Width="140" Margin="40,70,0,0" Click="Setting1_Click"/>
+                <Button CornerRadius="75" x:Name="Setting2" VerticalAlignment="Top" Height="140" Width="140" Margin="240,70,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting3" VerticalAlignment="Top" Height="140" Width="140" Margin="440,70,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting4" VerticalAlignment="Top" Height="140" Width="140" Margin="640,70,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting5" VerticalAlignment="Top" Height="140" Width="140" Margin="840,70,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting6" VerticalAlignment="Top" Height="140" Width="140" Margin="1040,70,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting7" VerticalAlignment="Top" Height="140" Width="140" Margin="1240,70,0,0"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

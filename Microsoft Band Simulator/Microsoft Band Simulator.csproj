@@ -129,6 +129,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingApp.xaml.cs">
+      <DependentUpon>SettingApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingControls\Setting1.xaml.cs">
+      <DependentUpon>Setting1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UV.xaml.cs">
       <DependentUpon>UV.xaml</DependentUpon>
     </Compile>
@@ -190,6 +196,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SettingApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingControls\Setting1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UV.xaml">
       <Generator>MSBuild:Compile</Generator>

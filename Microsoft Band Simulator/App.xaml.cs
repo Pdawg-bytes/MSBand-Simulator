@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft_Band_Simulator.SettingControls;
 
 namespace Microsoft_Band_Simulator
 {
@@ -79,10 +80,11 @@ namespace Microsoft_Band_Simulator
                 // Add acrylic to TitleBar
                 ExtendAcrylicIntoTitleBar();
 
-                // Setting Band defaults
                 // Setting defaults
                 Band2.devtheme = Colors.DeepSkyBlue;
                 UV.devtheme = Colors.DeepSkyBlue;
+                SettingApp.devtheme = Colors.DeepSkyBlue;
+                Setting1.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
 
                 // Init clock service
@@ -109,7 +111,7 @@ namespace Microsoft_Band_Simulator
         private void DTW_Tick(object sender, object e)
         {
             Band2.time = DateTime.Now.ToString("hh:mm");
-            Band2.day = DateTime.Today.Day.ToString("0");
+            Band2.day = DateTime.Today.Day.ToString("00");
             Band2.dayname = DateTime.Now.ToString("ddd");
         }
 
