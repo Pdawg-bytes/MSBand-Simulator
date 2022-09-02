@@ -3,3 +3,6 @@ MSBand-Simulator is a fully open source simulator for the Microsoft Band's UI th
 
 # Building
 To build this app, you need the Windows10SDK 19041 installed and UWP support in Visual Studio 2022. That's all to build!
+
+# Screenshots
+![image](https://user-images.githubusercontent.com/83825746/188160224-fa26e31f-c9c9-4d78-b014-d22aa63d229b.png)
