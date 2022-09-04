@@ -41,6 +41,7 @@ namespace Microsoft_Band_Simulator
         private void Settingview_Loaded(object sender, RoutedEventArgs e)
         {
             SettingSidebar.Fill = new SolidColorBrush(devtheme);
+
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

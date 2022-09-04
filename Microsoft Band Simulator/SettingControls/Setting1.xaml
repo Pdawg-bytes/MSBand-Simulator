@@ -18,7 +18,9 @@
         <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting1view" VerticalScrollMode="Disabled" HorizontalScrollMode="Disabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting1view_Loaded">
             <Grid Margin="0,0,0,0" Width="1400">
-                <ToggleButton x:Name="DNDToggle" VerticalAlignment="Top" Margin="30,110,0,0" CornerRadius="240" Height="130" Width="130">
+                <TextBlock x:Name="DNDLabel" Text="Do Not Disturb" Margin="30,10,0,0" FontSize="60" Height="70" Width="410" VerticalAlignment="Top" HorizontalAlignment="Left" IsColorFontEnabled="True"/>
+                <TextBlock x:Name="ToggleText" VerticalAlignment="Top" Text="Off" FontSize="80" FontWeight="Bold" HorizontalAlignment="Left" Margin="200,117,0,0" Foreground="DarkGray"/>
+                <ToggleButton x:Name="DNDToggle" VerticalAlignment="Top" Margin="30,110,0,0" CornerRadius="240" Height="130" Width="130" Checked="DNDToggle_Checked" Unchecked="DNDToggle_Unchecked">
                     <Image x:Name="image" HorizontalAlignment="Center" Height="44" VerticalAlignment="Center" Width="44" Source="ms-appx:///Assets/Icons/UV.png"/>
                 </ToggleButton>
             </Grid>

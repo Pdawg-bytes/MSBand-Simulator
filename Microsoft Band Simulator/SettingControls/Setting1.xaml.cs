@@ -45,6 +45,22 @@ namespace Microsoft_Band_Simulator.SettingControls
         private void Setting1view_Loaded(object sender, RoutedEventArgs e)
         {
             Setting1Sidebar.Fill = new SolidColorBrush(devtheme);
+            DNDLabel.Foreground = new SolidColorBrush(devtheme);
+            DNDToggle.Background = new SolidColorBrush(Color.FromArgb(100, 56, 52, 52));
+        }
+
+        private void DNDToggle_Checked(object sender, RoutedEventArgs e)
+        {
+            DNDToggle.Background = new SolidColorBrush(devtheme);
+            ToggleText.Text = "On";
+            ToggleText.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void DNDToggle_Unchecked(object sender, RoutedEventArgs e)
+        {
+            DNDToggle.Background = new SolidColorBrush(Color.FromArgb(100, 56, 52, 52));
+            ToggleText.Text = "Off";
+            ToggleText.Foreground = new SolidColorBrush(Colors.DarkGray);
         }
     }
 }
