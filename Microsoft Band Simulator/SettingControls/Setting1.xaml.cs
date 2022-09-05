@@ -31,6 +31,7 @@ namespace Microsoft_Band_Simulator.SettingControls
         public Setting1()
         {
             this.InitializeComponent();
+            // Setting ToggleButton color properties
             Application.Current.Resources["ToggleButtonBackgroundChecked"] = new SolidColorBrush(devtheme);
             Application.Current.Resources["ToggleButtonBackgroundCheckedPointerOver"] = new SolidColorBrush(devtheme);
             Application.Current.Resources["ToggleButtonBackgroundCheckedPressed"] = new SolidColorBrush(devtheme);

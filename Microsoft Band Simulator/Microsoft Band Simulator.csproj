@@ -135,6 +135,12 @@
     <Compile Include="SettingControls\Setting1.xaml.cs">
       <DependentUpon>Setting1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingControls\Setting3.xaml.cs">
+      <DependentUpon>Setting3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingControls\Setting4.xaml.cs">
+      <DependentUpon>Setting4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UV.xaml.cs">
       <DependentUpon>UV.xaml</DependentUpon>
     </Compile>
@@ -148,6 +154,7 @@
     <Content Include="Assets\back-arrow.png" />
     <Content Include="Assets\band2.svg" />
     <Content Include="Assets\cargo_fiber.png" />
+    <Content Include="Assets\Icons\airplane.png" />
     <Content Include="Assets\Icons\alarm.png" />
     <Content Include="Assets\Icons\battery.png" />
     <Content Include="Assets\Icons\bike.png" />
@@ -202,6 +209,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingControls\Setting1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingControls\Setting3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingControls\Setting4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

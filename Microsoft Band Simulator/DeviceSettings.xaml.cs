@@ -43,66 +43,77 @@ namespace Microsoft_Band_Simulator
                     UV.devtheme = Colors.DeepSkyBlue;
                     SettingApp.devtheme = Colors.DeepSkyBlue;
                     Setting1.devtheme = Colors.DeepSkyBlue;
+                    Setting3.devtheme = Colors.DeepSkyBlue;
                     break;
                 case "Dark Cyan":
                     Band2.devtheme = Colors.DarkCyan;
                     UV.devtheme = Colors.DarkCyan;
                     SettingApp.devtheme = Colors.DarkCyan;
                     Setting1.devtheme = Colors.DarkCyan;
+                    Setting3.devtheme = Colors.DarkCyan;
                     break;
                 case "Teal":
                     Band2.devtheme = Colors.Teal;
                     UV.devtheme = Colors.Teal;
                     SettingApp.devtheme = Colors.Teal;
                     Setting1.devtheme = Colors.Teal;
+                    Setting3.devtheme = Colors.Teal;
                     break;
                 case "Light Green":
                     Band2.devtheme = Colors.LimeGreen;
                     UV.devtheme = Colors.LimeGreen;
                     SettingApp.devtheme = Colors.LimeGreen;
                     Setting1.devtheme = Colors.LimeGreen;
+                    Setting3.devtheme = Colors.LimeGreen;
                     break;
                 case "Yellow Green":
                     Band2.devtheme = Colors.YellowGreen;
                     UV.devtheme = Colors.YellowGreen;
                     SettingApp.devtheme = Colors.YellowGreen;
                     Setting1.devtheme = Colors.YellowGreen;
+                    Setting3.devtheme = Colors.YellowGreen;
                     break;
                 case "Yellow":
                     Band2.devtheme = Colors.Yellow;
                     UV.devtheme = Colors.Yellow;
                     SettingApp.devtheme = Colors.Yellow;
                     Setting1.devtheme = Colors.Yellow;
+                    Setting3.devtheme = Colors.Yellow;
                     break;
                 case "Orange":
                     Band2.devtheme = Colors.Orange;
                     UV.devtheme = Colors.Orange;
                     SettingApp.devtheme = Colors.Orange;
                     Setting1.devtheme = Colors.Orange;
+                    Setting3.devtheme = Colors.Orange;
                     break;
                 case "Red":
                     Band2.devtheme = Colors.Red;
                     UV.devtheme = Colors.Red;
                     SettingApp.devtheme = Colors.Red;
                     Setting1.devtheme = Colors.Red;
+                    Setting3.devtheme = Colors.Red;
                     break;
                 case "Hot Pink":
                     Band2.devtheme = Colors.HotPink;
                     UV.devtheme = Colors.HotPink;
                     SettingApp.devtheme = Colors.HotPink;
                     Setting1.devtheme = Colors.HotPink;
+                    Setting3.devtheme = Colors.HotPink;
                     break;
                 case "Magenta":
                     Band2.devtheme = Colors.DarkMagenta;
                     UV.devtheme = Colors.DarkMagenta;
                     SettingApp.devtheme = Colors.DarkMagenta;
                     Setting1.devtheme = Colors.DarkMagenta;
+                    Setting3.devtheme = Colors.DarkMagenta;
                     break;
                 case "Purple":
                     Band2.devtheme = Colors.BlueViolet;
                     UV.devtheme = Colors.BlueViolet;
                     SettingApp.devtheme = Colors.BlueViolet;
                     Setting1.devtheme = Colors.BlueViolet;
+                    Setting3.devtheme = Colors.BlueViolet;
                     break;
 
             }

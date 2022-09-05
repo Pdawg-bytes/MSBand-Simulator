@@ -20,8 +20,10 @@
             <Grid Margin="0,0,0,0" Width="1400">
                 <Button CornerRadius="75" x:Name="Setting1" VerticalAlignment="Top" Height="140" Width="140" Margin="40,60,0,0" Click="Setting1_Click"/>
                 <Button CornerRadius="75" x:Name="Setting2" VerticalAlignment="Top" Height="140" Width="140" Margin="240,60,0,0"/>
-                <Button CornerRadius="75" x:Name="Setting3" VerticalAlignment="Top" Height="140" Width="140" Margin="440,60,0,0"/>
-                <Button CornerRadius="75" x:Name="Setting4" VerticalAlignment="Top" Height="140" Width="140" Margin="640,60,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting3" VerticalAlignment="Top" Height="140" Width="140" Margin="440,60,0,0" Click="Setting3_Click">
+                    <Image Source="ms-appx:///Assets/Icons/airplane.png" Height="80" Margin="7,0,0,0"/>
+                </Button>
+                <Button CornerRadius="75" x:Name="Setting4" VerticalAlignment="Top" Height="140" Width="140" Margin="640,60,0,0" Click="Setting4_Click"/>
                 <Button CornerRadius="75" x:Name="Setting5" VerticalAlignment="Top" Height="140" Width="140" Margin="840,60,0,0"/>
                 <Button CornerRadius="75" x:Name="Setting6" VerticalAlignment="Top" Height="140" Width="140" Margin="1040,60,0,0"/>
                 <Button CornerRadius="75" x:Name="Setting7" VerticalAlignment="Top" Height="140" Width="140" Margin="1240,60,0,0"/>

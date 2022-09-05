@@ -84,8 +84,10 @@ namespace Microsoft_Band_Simulator
                 Band2.devtheme = Colors.DeepSkyBlue;
                 UV.devtheme = Colors.DeepSkyBlue;
                 SettingApp.devtheme = Colors.DeepSkyBlue;
-                Setting1.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
+                Setting1.devtheme = Colors.DeepSkyBlue;
+                Setting3.devtheme = Colors.DeepSkyBlue;
+                Setting4.devtheme = Colors.DeepSkyBlue;
 
                 // Init clock service
                 DispatcherTimer Timer = new DispatcherTimer();
