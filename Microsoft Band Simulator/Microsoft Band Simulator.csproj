@@ -141,6 +141,9 @@
     <Compile Include="SettingControls\Setting4.xaml.cs">
       <DependentUpon>Setting4.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingControls\Setting6.xaml.cs">
+      <DependentUpon>Setting6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UV.xaml.cs">
       <DependentUpon>UV.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,7 @@
     <Content Include="Assets\Icons\alarm.png" />
     <Content Include="Assets\Icons\battery.png" />
     <Content Include="Assets\Icons\bike.png" />
+    <Content Include="Assets\Icons\bluetooth.png" />
     <Content Include="Assets\Icons\calendar.png" />
     <Content Include="Assets\Icons\calls.png" />
     <Content Include="Assets\Icons\cortana.png" />
@@ -217,6 +221,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingControls\Setting4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingControls\Setting6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -21,52 +21,33 @@ using Microsoft_Band_Simulator;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Microsoft_Band_Simulator
+namespace Microsoft_Band_Simulator.SettingControls
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SettingApp : Page
+    public sealed partial class Setting6 : Page
     {
-        public SettingApp()
+        public Setting6()
         {
-            // Manages ToggleButton theme color
             this.InitializeComponent();
+            // Setting color properties
             Application.Current.Resources["ToggleButtonBackgroundChecked"] = new SolidColorBrush(devtheme);
             Application.Current.Resources["ToggleButtonBackgroundCheckedPointerOver"] = new SolidColorBrush(devtheme);
             Application.Current.Resources["ToggleButtonBackgroundCheckedPressed"] = new SolidColorBrush(devtheme);
+            Application.Current.Resources["ComboBoxBackgroundPointerOver"] = new SolidColorBrush(Color.FromArgb(255, 102, 102, 102));
         }
+
         public static Color devtheme;
-
-        private void Settingview_Loaded(object sender, RoutedEventArgs e)
-        {
-            SettingSidebar.Fill = new SolidColorBrush(devtheme);
-
-        }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Band2), null, new DrillInNavigationTransitionInfo());
+            this.Frame.Navigate(typeof(SettingApp), null, new SuppressNavigationTransitionInfo());
         }
 
-        private void Setting1_Click(object sender, RoutedEventArgs e)
+        private void Setting6view_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Setting1), null, new SuppressNavigationTransitionInfo());
-        }
-
-        private void Setting3_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Setting3), null, new SuppressNavigationTransitionInfo());
-        }
-
-        private void Setting4_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Setting4), null, new SuppressNavigationTransitionInfo());
-        }
-
-        private void Setting6_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Setting6), null, new SuppressNavigationTransitionInfo());
+            Setting6Sidebar.Fill = new SolidColorBrush(devtheme);
         }
     }
 }

@@ -31,10 +31,11 @@ namespace Microsoft_Band_Simulator.SettingControls
         public Setting4()
         {
             this.InitializeComponent();
-            // Setting ToggleButton color properties
+            // Setting color properties
             Application.Current.Resources["ToggleButtonBackgroundChecked"] = new SolidColorBrush(devtheme);
             Application.Current.Resources["ToggleButtonBackgroundCheckedPointerOver"] = new SolidColorBrush(devtheme);
             Application.Current.Resources["ToggleButtonBackgroundCheckedPressed"] = new SolidColorBrush(devtheme);
+            Application.Current.Resources["ComboBoxBackgroundPointerOver"] = new SolidColorBrush(Color.FromArgb(255, 102, 102, 102));
         }
 
         public static Color devtheme;
@@ -44,15 +45,11 @@ namespace Microsoft_Band_Simulator.SettingControls
             this.Frame.Navigate(typeof(SettingApp), null, new SuppressNavigationTransitionInfo());
         }
 
-        private void Setting1view_Loaded(object sender, RoutedEventArgs e)
+        private void Setting4view_Loaded(object sender, RoutedEventArgs e)
         {
             Setting4Sidebar.Fill = new SolidColorBrush(devtheme);
             BTLabel.Foreground = new SolidColorBrush(devtheme);
-        }
-
-        private void BTCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            BTCombo.Background = new SolidColorBrush(Color.FromArgb(255, 102, 102, 102));
         }
     }
 }
