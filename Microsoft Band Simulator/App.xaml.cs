@@ -89,6 +89,9 @@ namespace Microsoft_Band_Simulator
                 Setting3.devtheme = Colors.DeepSkyBlue;
                 Setting4.devtheme = Colors.DeepSkyBlue;
                 Setting6.devtheme = Colors.DeepSkyBlue;
+                Setting6.sysname = Environment.MachineName;
+                Setting6.bandname = "Band 2";
+                Setting7.devtheme = Colors.DeepSkyBlue;
 
                 // Init clock service
                 DispatcherTimer Timer = new DispatcherTimer();

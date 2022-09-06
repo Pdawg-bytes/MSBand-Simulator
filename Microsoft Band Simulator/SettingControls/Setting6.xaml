@@ -16,8 +16,17 @@
         <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Grid.RowSpan="2" x:Name="Setting6Sidebar"/>
         <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-50,0,0"/>
         <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting1view" VerticalScrollMode="Disabled" HorizontalScrollMode="Disabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting6view_Loaded">
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting1view" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting6view_Loaded">
             <Grid Margin="0,0,0,0" Width="1400">
+                <TextBlock x:Name="SysLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Paired to" VerticalAlignment="Top" Height="100" Width="250" FontSize="50" IsColorFontEnabled="True" Margin="20,0,0,0"/>
+                <TextBlock x:Name="SysNameText" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="45" Margin="20,60,0,0" Height="100" Width="400"/>
+                <TextBlock x:Name="BandNameLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Band Name" VerticalAlignment="Top" Height="100" Width="400" FontSize="50" IsColorFontEnabled="True" Margin="20,110,0,0"/>
+                <TextBlock x:Name="BandName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="400" FontSize="50" Margin="20,170,0,0"/>
+                <TextBlock x:Name="Serial" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="200" FontSize="50" Margin="-30,0,0,0" Text="Serial ID"/>
+                <TextBlock x:Name="SerialID" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="400" FontSize="45" Margin="170,60,0,0" Text="123456789012"/>
+                <TextBlock x:Name="BuildLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="400" FontSize="50" Text="Build Version" Margin="170,110,0,0"/>
+                <TextBlock x:Name="BuildVersion" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="400" FontSize="50" Text="2.0.3640.0 26 R" Margin="170,170,0,0"/>
+                <Image Source="ms-appx:///Assets/Icons/FCC.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="150" Margin="900,50,0,0"/>
             </Grid>
         </ScrollViewer>
     </Grid>

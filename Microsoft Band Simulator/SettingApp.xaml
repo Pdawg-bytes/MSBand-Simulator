@@ -18,7 +18,9 @@
         <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Settingview" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Settingview_Loaded">
             <Grid Margin="0,0,0,0" Width="1400">
-                <Button CornerRadius="75" x:Name="Setting1" VerticalAlignment="Top" Height="140" Width="140" Margin="40,60,0,0" Click="Setting1_Click"/>
+                <Button CornerRadius="75" x:Name="Setting1" VerticalAlignment="Top" Height="140" Width="140" Margin="40,60,0,0" Click="Setting1_Click">
+                    <Image Source="ms-appx:///Assets/Icons/dnd.png" Height="80"/>
+                </Button>
                 <Button CornerRadius="75" x:Name="Setting2" VerticalAlignment="Top" Height="140" Width="140" Margin="240,60,0,0"/>
                 <Button CornerRadius="75" x:Name="Setting3" VerticalAlignment="Top" Height="140" Width="140" Margin="440,60,0,0" Click="Setting3_Click">
                     <Image Source="ms-appx:///Assets/Icons/airplane.png" Height="80" Margin="7,0,0,0"/>
@@ -30,7 +32,9 @@
                 <Button CornerRadius="75" x:Name="Setting6" VerticalAlignment="Top" Height="140" Width="140" Margin="1040,60,0,0" Click="Setting6_Click">
                     <TextBlock Text="i" FontWeight="ExtraBold" FontSize="70" Margin="2,0,0,0"/>
                 </Button>
-                <Button CornerRadius="75" x:Name="Setting7" VerticalAlignment="Top" Height="140" Width="140" Margin="1240,60,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting7" VerticalAlignment="Top" Height="140" Width="140" Margin="1240,60,0,0" Click="Setting7_Click">
+                    <Image Source="ms-appx:///Assets/Icons/power.png" Height="80"/>
+                </Button>
             </Grid>
         </ScrollViewer>
     </Grid>

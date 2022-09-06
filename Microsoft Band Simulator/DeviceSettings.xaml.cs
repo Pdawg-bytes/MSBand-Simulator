@@ -46,6 +46,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.DeepSkyBlue;
                     Setting4.devtheme = Colors.DeepSkyBlue;
                     Setting6.devtheme = Colors.DeepSkyBlue;
+                    Setting7.devtheme = Colors.DeepSkyBlue;
                     break;
                 case "Dark Cyan":
                     Band2.devtheme = Colors.DarkCyan;
@@ -55,6 +56,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.DarkCyan;
                     Setting4.devtheme = Colors.DarkCyan;
                     Setting6.devtheme = Colors.DarkCyan;
+                    Setting7.devtheme = Colors.DarkCyan;
                     break;
                 case "Teal":
                     Band2.devtheme = Colors.Teal;
@@ -64,6 +66,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.Teal;
                     Setting4.devtheme = Colors.Teal;
                     Setting6.devtheme = Colors.Teal;
+                    Setting7.devtheme = Colors.Teal;
                     break;
                 case "Light Green":
                     Band2.devtheme = Colors.LimeGreen;
@@ -73,6 +76,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.LimeGreen;
                     Setting4.devtheme = Colors.LimeGreen;
                     Setting6.devtheme = Colors.LimeGreen;
+                    Setting7.devtheme = Colors.LimeGreen;
                     break;
                 case "Yellow Green":
                     Band2.devtheme = Colors.YellowGreen;
@@ -82,6 +86,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.YellowGreen;
                     Setting4.devtheme = Colors.YellowGreen;
                     Setting6.devtheme = Colors.YellowGreen;
+                    Setting7.devtheme = Colors.YellowGreen;
                     break;
                 case "Yellow":
                     Band2.devtheme = Colors.Yellow;
@@ -91,6 +96,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.Yellow;
                     Setting4.devtheme = Colors.Yellow;
                     Setting6.devtheme = Colors.Yellow;
+                    Setting7.devtheme = Colors.Yellow;
                     break;
                 case "Orange":
                     Band2.devtheme = Colors.Orange;
@@ -100,6 +106,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.Orange;
                     Setting4.devtheme = Colors.Orange;
                     Setting6.devtheme = Colors.Orange;
+                    Setting7.devtheme = Colors.Orange;
                     break;
                 case "Red":
                     Band2.devtheme = Colors.Red;
@@ -109,6 +116,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.Red;
                     Setting4.devtheme = Colors.Red;
                     Setting6.devtheme = Colors.Red;
+                    Setting7.devtheme = Colors.Red;
                     break;
                 case "Hot Pink":
                     Band2.devtheme = Colors.HotPink;
@@ -118,6 +126,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.HotPink;
                     Setting4.devtheme = Colors.HotPink;
                     Setting6.devtheme = Colors.HotPink;
+                    Setting7.devtheme = Colors.HotPink;
                     break;
                 case "Magenta":
                     Band2.devtheme = Colors.DarkMagenta;
@@ -127,6 +136,7 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.DarkMagenta;
                     Setting4.devtheme = Colors.DarkMagenta;
                     Setting6.devtheme = Colors.DarkMagenta;
+                    Setting7.devtheme = Colors.DarkMagenta;
                     break;
                 case "Purple":
                     Band2.devtheme = Colors.BlueViolet;
@@ -136,14 +146,10 @@ namespace Microsoft_Band_Simulator
                     Setting3.devtheme = Colors.BlueViolet;
                     Setting4.devtheme = Colors.BlueViolet;
                     Setting6.devtheme = Colors.BlueViolet;
+                    Setting7.devtheme = Colors.BlueViolet;
                     break;
 
             }
-        }
-
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -154,7 +160,7 @@ namespace Microsoft_Band_Simulator
 
         private void DeviceName_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            Setting6.bandname = DeviceName.Text;
         }
 
         private void BatteryPercentSet_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)

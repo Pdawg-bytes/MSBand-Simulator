@@ -144,6 +144,9 @@
     <Compile Include="SettingControls\Setting6.xaml.cs">
       <DependentUpon>Setting6.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingControls\Setting7.xaml.cs">
+      <DependentUpon>Setting7.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UV.xaml.cs">
       <DependentUpon>UV.xaml</DependentUpon>
     </Compile>
@@ -165,15 +168,18 @@
     <Content Include="Assets\Icons\calendar.png" />
     <Content Include="Assets\Icons\calls.png" />
     <Content Include="Assets\Icons\cortana.png" />
+    <Content Include="Assets\Icons\dnd.png" />
     <Content Include="Assets\Icons\email.png" />
     <Content Include="Assets\Icons\exercise.png" />
     <Content Include="Assets\Icons\facebook.png" />
     <Content Include="Assets\Icons\facebookmessenger.png" />
+    <Content Include="Assets\Icons\FCC.png" />
     <Content Include="Assets\Icons\finance.png" />
     <Content Include="Assets\Icons\guidedworkouts.png" />
     <Content Include="Assets\Icons\lync.png" />
     <Content Include="Assets\Icons\messaging.png" />
     <Content Include="Assets\Icons\notificationcenter.png" />
+    <Content Include="Assets\Icons\power.png" />
     <Content Include="Assets\Icons\run.png" />
     <Content Include="Assets\Icons\settings.png" />
     <Content Include="Assets\Icons\sleep.png" />
@@ -225,6 +231,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingControls\Setting6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingControls\Setting7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

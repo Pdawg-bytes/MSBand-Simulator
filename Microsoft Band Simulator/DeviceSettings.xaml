@@ -34,20 +34,6 @@
             <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
             <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
         </StackPanel>
-        <GridView
-            x:Name="WallpaperGridView"
-            IsItemClickEnabled="True"
-            CanDragItems="False"
-            AllowDrop="False"
-            CanReorderItems="False"
-            SelectionMode="Single"
-            FlowDirection="LeftToRight"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Grid.Row="1"
-            Margin="0,0,0,0"/>
-
-        <Button Content="Save" x:Name="SaveButton" Style="{ThemeResource AccentButtonStyle}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="100,0,0,40" Click="SaveButton_Click"/>
-        <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,100,40" Click="Back_Click"/>
+        <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="25"/>
     </Grid>
 </Page>

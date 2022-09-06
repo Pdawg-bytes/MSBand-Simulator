@@ -68,5 +68,10 @@ namespace Microsoft_Band_Simulator
         {
             this.Frame.Navigate(typeof(Setting6), null, new SuppressNavigationTransitionInfo());
         }
+
+        private void Setting7_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Setting7), null, new SuppressNavigationTransitionInfo());
+        }
     }
 }
