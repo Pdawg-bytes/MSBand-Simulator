@@ -25,8 +25,8 @@
                 <ToggleButton x:Name="AlarmToggle" VerticalAlignment="Top" Margin="956,116,0,0" CornerRadius="240" Height="100" Width="100" Checked="AlarmToggle_Checked" Unchecked="AlarmToggle_Unchecked">
                     <Image x:Name="image" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center" Source="ms-appx:///Assets/Icons/alarm.png"/>
                 </ToggleButton>
-                <TextBlock x:Name="SmartAlarmLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Smart Alarm" VerticalAlignment="Top" Height="67" Width="295" FontSize="50" IsColorFontEnabled="True" Margin="1080,10,0,0"/>
-                <ToggleSwitch x:Name="SmartAlarmToggle" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,82,47,0" Height="40" Width="270" />
+                <TextBlock x:Name="SmartAlarmLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Smart Alarm" VerticalAlignment="Top" Height="67" Width="295" FontSize="50" IsColorFontEnabled="True" Margin="1118,10,0,0"/>
+                <TextBlock x:Name="SmartAlarmText" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="WrapWholeWords" Text="May go off up to 30 min before your alarm would normally go off" Margin="1118,90,0,0" FontSize="28" Height="150"/>
             </Grid>
         </ScrollViewer>
     </Grid>

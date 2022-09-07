@@ -48,6 +48,8 @@ namespace Microsoft_Band_Simulator
         {
             SleepSidebar.Fill = new SolidColorBrush(devtheme);
             SleepLabel.Foreground = new SolidColorBrush(devtheme);
+            SmartAlarmLabel.Foreground = new SolidColorBrush(devtheme);
+            AlarmLabel.Foreground = new SolidColorBrush(devtheme);
         }
 
         private void AlarmToggle_Checked(object sender, RoutedEventArgs e)
