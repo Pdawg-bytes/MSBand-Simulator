@@ -122,6 +122,9 @@
     <Compile Include="Band2.xaml.cs">
       <DependentUpon>Band2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClockApp.xaml.cs">
+      <DependentUpon>ClockApp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DeviceSettings.xaml.cs">
       <DependentUpon>DeviceSettings.xaml</DependentUpon>
     </Compile>
@@ -135,17 +138,26 @@
     <Compile Include="SettingControls\Setting1.xaml.cs">
       <DependentUpon>Setting1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingControls\Setting2.xaml.cs">
+      <DependentUpon>Setting2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SettingControls\Setting3.xaml.cs">
       <DependentUpon>Setting3.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingControls\Setting4.xaml.cs">
       <DependentUpon>Setting4.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingControls\Setting5.xaml.cs">
+      <DependentUpon>Setting5.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SettingControls\Setting6.xaml.cs">
       <DependentUpon>Setting6.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingControls\Setting7.xaml.cs">
       <DependentUpon>Setting7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SleepApp.xaml.cs">
+      <DependentUpon>SleepApp.xaml</DependentUpon>
     </Compile>
     <Compile Include="UV.xaml.cs">
       <DependentUpon>UV.xaml</DependentUpon>
@@ -167,6 +179,7 @@
     <Content Include="Assets\Icons\bluetooth.png" />
     <Content Include="Assets\Icons\calendar.png" />
     <Content Include="Assets\Icons\calls.png" />
+    <Content Include="Assets\Icons\clock.png" />
     <Content Include="Assets\Icons\cortana.png" />
     <Content Include="Assets\Icons\dnd.png" />
     <Content Include="Assets\Icons\email.png" />
@@ -176,6 +189,7 @@
     <Content Include="Assets\Icons\FCC.png" />
     <Content Include="Assets\Icons\finance.png" />
     <Content Include="Assets\Icons\guidedworkouts.png" />
+    <Content Include="Assets\Icons\heart.png" />
     <Content Include="Assets\Icons\lync.png" />
     <Content Include="Assets\Icons\messaging.png" />
     <Content Include="Assets\Icons\notificationcenter.png" />
@@ -206,6 +220,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ClockApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DeviceSettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -222,6 +240,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SettingControls\Setting2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SettingControls\Setting3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -230,11 +252,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SettingControls\Setting5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SettingControls\Setting6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingControls\Setting7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SleepApp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

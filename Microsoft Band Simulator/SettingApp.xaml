@@ -21,14 +21,18 @@
                 <Button CornerRadius="75" x:Name="Setting1" VerticalAlignment="Top" Height="140" Width="140" Margin="40,60,0,0" Click="Setting1_Click">
                     <Image Source="ms-appx:///Assets/Icons/dnd.png" Height="80"/>
                 </Button>
-                <Button CornerRadius="75" x:Name="Setting2" VerticalAlignment="Top" Height="140" Width="140" Margin="240,60,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting2" VerticalAlignment="Top" Height="140" Width="140" Margin="240,60,0,0" Click="Setting2_Click">
+                    <Image Source="ms-appx:///Assets/Icons/clock.png" Height="80"/>
+                </Button>
                 <Button CornerRadius="75" x:Name="Setting3" VerticalAlignment="Top" Height="140" Width="140" Margin="440,60,0,0" Click="Setting3_Click">
                     <Image Source="ms-appx:///Assets/Icons/airplane.png" Height="80" Margin="7,0,0,0"/>
                 </Button>
                 <Button CornerRadius="75" x:Name="Setting4" VerticalAlignment="Top" Height="140" Width="140" Margin="640,60,0,0" Click="Setting4_Click">
                     <Image Source="ms-appx:///Assets/Icons/bluetooth.png" Height="80" Margin="0,0,0,0"/>
                 </Button>
-                <Button CornerRadius="75" x:Name="Setting5" VerticalAlignment="Top" Height="140" Width="140" Margin="840,60,0,0"/>
+                <Button CornerRadius="75" x:Name="Setting5" VerticalAlignment="Top" Height="140" Width="140" Margin="840,60,0,0" Click="Setting5_Click">
+                    <Image Source="ms-appx:///Assets/Icons/settings.png" Height="80"/>
+                </Button>
                 <Button CornerRadius="75" x:Name="Setting6" VerticalAlignment="Top" Height="140" Width="140" Margin="1040,60,0,0" Click="Setting6_Click">
                     <TextBlock Text="i" FontWeight="ExtraBold" FontSize="70" Margin="2,0,0,0"/>
                 </Button>

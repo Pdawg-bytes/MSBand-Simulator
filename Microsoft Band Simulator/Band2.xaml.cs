@@ -73,11 +73,6 @@ namespace Microsoft_Band_Simulator
             #pragma warning restore CS0618 // Type or member is obsolete
         }
 
-        private void Band2view_ViewChanging(object sender, ScrollViewerViewChangingEventArgs e)
-        {
-            // Removed
-        }
-
         private async void Band2view_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
             if (e.IsIntermediate)
@@ -106,6 +101,16 @@ namespace Microsoft_Band_Simulator
         private void SettingOpen_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SettingApp), null, new DrillInNavigationTransitionInfo());
+        }
+
+        private void AlarmOpen_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ClockApp), null, new DrillInNavigationTransitionInfo());
+        }
+
+        private void SleepOpen_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SleepApp), null, new DrillInNavigationTransitionInfo());
         }
     }
 }

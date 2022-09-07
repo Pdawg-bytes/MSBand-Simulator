@@ -41,7 +41,6 @@ namespace Microsoft_Band_Simulator
         private void Settingview_Loaded(object sender, RoutedEventArgs e)
         {
             SettingSidebar.Fill = new SolidColorBrush(devtheme);
-
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -72,6 +71,16 @@ namespace Microsoft_Band_Simulator
         private void Setting7_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Setting7), null, new SuppressNavigationTransitionInfo());
+        }
+
+        private void Setting2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Setting2), null, new SuppressNavigationTransitionInfo());
+        }
+
+        private void Setting5_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Setting5), null, new SuppressNavigationTransitionInfo());
         }
     }
 }

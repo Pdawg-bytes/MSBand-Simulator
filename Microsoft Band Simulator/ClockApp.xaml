@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Microsoft_Band_Simulator.ClockApp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft_Band_Simulator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="517*"/>
+            <RowDefinition Height="483*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Grid.RowSpan="2" x:Name="ClockSidebar"/>
+        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-50,0,0"/>
+        <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Clockview" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Clockview_Loaded">
+            <Grid Margin="0,0,0,0" Width="1400">
+                <TextBlock x:Name="AlarmLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Alarm" VerticalAlignment="Top" Height="100" Width="250" FontSize="50" IsColorFontEnabled="True" Margin="20,10,0,0"/>
+                <TimePicker x:Name="AlarmPicker" VerticalAlignment="Top" Height="130" Width="460" Margin="20,110,0,0" FontSize="60" FontWeight="Bold" AllowDrop="False"/>
+                <ToggleButton x:Name="AlarmToggle" VerticalAlignment="Top" Margin="494,110,0,0" CornerRadius="240" Height="100" Width="100" Checked="AlarmToggle_Checked" Unchecked="AlarmToggle_Unchecked">
+                    <Image x:Name="image" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center" Source="ms-appx:///Assets/Icons/alarm.png"/>
+                </ToggleButton>
+                <TextBlock x:Name="TimerLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Timer" VerticalAlignment="Top" Height="100" Width="250" FontSize="50" IsColorFontEnabled="True" Margin="140,10,0,0"/>
+                <TimePicker x:Name="TimerPicker" VerticalAlignment="Top" Height="130" Width="340" Margin="645,110,0,0" FontSize="60" FontWeight="Bold" AllowDrop="False"/>
+                <TextBlock x:Name="StopwatchLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Stopwatch" VerticalAlignment="Top" Height="100" Width="250" FontSize="50" IsColorFontEnabled="True" Margin="1020,10,0,0"/>
+                <TextBlock x:Name="StopwatchDesc" HorizontalAlignment="Left" TextWrapping="WrapWholeWords" Text="Press action button to start." VerticalAlignment="Top" FontSize="40" Height="110" Width="378" Margin="1020,100,0,0"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

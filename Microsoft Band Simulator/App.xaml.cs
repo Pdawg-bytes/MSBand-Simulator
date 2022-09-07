@@ -83,11 +83,15 @@ namespace Microsoft_Band_Simulator
                 // Setting defaults
                 Band2.devtheme = Colors.DeepSkyBlue;
                 UV.devtheme = Colors.DeepSkyBlue;
+                ClockApp.devtheme = Colors.DeepSkyBlue;
+                SleepApp.devtheme = Colors.DeepSkyBlue;
                 SettingApp.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
                 Setting1.devtheme = Colors.DeepSkyBlue;
+                Setting2.devtheme = Colors.DeepSkyBlue;
                 Setting3.devtheme = Colors.DeepSkyBlue;
                 Setting4.devtheme = Colors.DeepSkyBlue;
+                Setting5.devtheme = Colors.DeepSkyBlue;
                 Setting6.devtheme = Colors.DeepSkyBlue;
                 Setting6.sysname = Environment.MachineName;
                 Setting6.bandname = "Band 2";

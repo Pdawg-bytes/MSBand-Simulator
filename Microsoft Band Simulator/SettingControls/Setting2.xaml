@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Microsoft_Band_Simulator.SettingControls.Setting2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft_Band_Simulator.SettingControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="517*"/>
+            <RowDefinition Height="483*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Grid.RowSpan="2" x:Name="Setting2Sidebar"/>
+        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-50,0,0"/>
+        <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting3view" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting3view_Loaded">
+            <Grid Margin="0,0,0,0" Width="1400">
+                <TextBlock x:Name="WMLabel" Text="Watch Mode" Margin="30,10,0,0" FontSize="60" Height="70" Width="410" VerticalAlignment="Top" HorizontalAlignment="Left" IsColorFontEnabled="True"/>
+                <TextBlock x:Name="WMToggleText" VerticalAlignment="Top" Text="Off" FontSize="80" FontWeight="Bold" HorizontalAlignment="Left" Margin="200,116,0,0" Foreground="DarkGray"/>
+                <ToggleButton x:Name="WMToggle" VerticalAlignment="Top" Margin="30,110,0,0" CornerRadius="240" Height="130" Width="130" Unchecked="WMToggle_Unchecked" Checked="WMToggle_Checked">
+                    <Image x:Name="image" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center" Source="ms-appx:///Assets/Icons/clock.png" Margin="0,0,0,0"/>
+                </ToggleButton>
+                <TextBlock x:Name="HourLabel" Text="24 Hour Time" Margin="510,10,0,0" FontSize="60" Height="70" Width="410" VerticalAlignment="Top" HorizontalAlignment="Left" IsColorFontEnabled="True"/>
+                <ToggleButton x:Name="HourToggle" VerticalAlignment="Top" Margin="510,110,0,0" CornerRadius="240" Height="130" Width="130" Unchecked="HourToggle_Unchecked" Checked="HourToggle_Checked">
+                    <TextBlock x:Name="Hourtextin" HorizontalAlignment="Center" Height="80" Width="70" VerticalAlignment="Top" Text="24" FontSize="60" FontWeight="Bold" Margin="0,-8,0,0"/>
+                </ToggleButton>
+                <TextBlock x:Name="HourToggleText" VerticalAlignment="Top" Text="Off" FontSize="80" FontWeight="Bold" HorizontalAlignment="Left" Margin="680,116,0,0" Foreground="DarkGray"/>
+                <TextBlock x:Name="AutoSetLabel" Text="Auto Set Time" Margin="985,10,0,0" FontSize="60" Height="70" Width="410" VerticalAlignment="Top" HorizontalAlignment="Left" IsColorFontEnabled="True"/>
+                <ToggleButton x:Name="AutoSetToggle" VerticalAlignment="Top" Margin="985,110,0,0" CornerRadius="240" Height="130" Width="130" Checked="AutoSetToggle_Checked" Unchecked="AutoSetToggle_Unchecked">
+                    <Image x:Name="AutoSetImage" HorizontalAlignment="Center" Height="80" Width="70" Source="ms-appx:///Assets/Icons/clock.png"  Margin="0,0,0,0"/>
+                </ToggleButton>
+                <TextBlock x:Name="AutoSetToggleText" VerticalAlignment="Top" Text="Off" FontSize="80" FontWeight="Bold" HorizontalAlignment="Left" Margin="1150,116,0,0" Foreground="DarkGray"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
