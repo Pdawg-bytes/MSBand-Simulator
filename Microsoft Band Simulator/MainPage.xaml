@@ -22,7 +22,9 @@
         <CommandBar Background="Transparent" DefaultLabelPosition="Right" HorizontalAlignment="Center" Grid.Row="1">
             <AppBarButton Icon="Play" Label="Power on" Click="StartButton_Click" x:Name="pwon" />
             <AppBarButton Icon="Stop" Label="Power off" Click="OffButton_Click" x:Name="pwoff"/>
-            <AppBarButton Icon="Setting" Label="Device settings" Click="DevSettingsButton_Click"/>
+            <AppBarButton Icon="Setting" Label="Device Settings" Click="DevSettingsButton_Click"/>
+            <AppBarSeparator/>
+            <AppBarButton Icon="PreviewLink" Label="Send Notification"/>
         </CommandBar>
         <Frame x:Name="Band2Frame" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="254" Width="686" Margin="0,0,0,0" MinHeight="254" MinWidth="686">
             <Frame.ContentTransitions>

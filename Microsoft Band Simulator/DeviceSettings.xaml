@@ -33,7 +33,26 @@
             </ComboBox>
             <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
             <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
+            <ToggleSwitch x:Name="DynamicBatteryToggle" Header="Enable dynamic battery" Margin="0,30,0,0" ToolTipService.ToolTip="Lowers the battery value every 20-30 seconds."/>
         </StackPanel>
+        <GridView MaxHeight="500" x:Name="cvsProjects" Grid.Row="1" HorizontalAlignment="Center" IsItemClickEnabled="True">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="20">
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" 
+                                   Style="{StaticResource BaseTextBlockStyle}"/>
+                        <TextBlock Text="{Binding DueDate}" TextWrapping="NoWrap" 
+                                   Style="{StaticResource BodyTextBlockStyle}" />
+                        <Image Source="ms-appx:///Assets/Wallpaper/cargo_fiber.png" Height="130"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </GridView>
         <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="25"/>
     </Grid>
 </Page>

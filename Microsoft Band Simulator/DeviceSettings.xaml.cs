@@ -10,6 +10,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
+
 using Windows.UI.Xaml.Data;
 using Microsoft_Band_Simulator.SettingControls;
 using System.Diagnostics;
@@ -17,6 +18,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,9 +29,11 @@ namespace Microsoft_Band_Simulator
     /// </summary>
     public sealed partial class DeviceSettings : Page
     {
+        DateTime startDate = DateTime.Now;
         public DeviceSettings()
         {
             this.InitializeComponent();
+            PopulateProjects();
         }
 
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -211,5 +215,50 @@ namespace Microsoft_Band_Simulator
         {
             Band2.battery = Convert.ToInt32(e.NewValue);
         }
+        private void PopulateProjects()
+        {
+            List<Project> Projects = new List<Project>();
+
+            Project newProject = new Project();
+            newProject.Name = "Project 1";
+            newProject.Activities.Add(new Activity()
+            { Name = "Activity 1", Complete = true, DueDate = startDate.AddDays(4) });
+            newProject.Activities.Add(new Activity()
+            { Name = "Activity 2", Complete = true, DueDate = startDate.AddDays(5) });
+            Projects.Add(newProject);
+
+            newProject = new Project();
+            newProject.Name = "Project 2";
+            newProject.Activities.Add(new Activity()
+            { Name = "Activity A", Complete = true, DueDate = startDate.AddDays(2) });
+            newProject.Activities.Add(new Activity()
+            { Name = "Activity B", Complete = false, DueDate = startDate.AddDays(3) });
+            Projects.Add(newProject);
+
+            newProject = new Project();
+            newProject.Name = "Project 3";
+            Projects.Add(newProject);
+
+            cvsProjects.ItemsSource = Projects;
+        }
+    }
+
+    public class Project
+    {
+        public Project()
+        {
+            Activities = new ObservableCollection<Activity>();
+        }
+
+        public string Name { get; set; }
+        public ObservableCollection<Activity> Activities { get; private set; }
+    }
+
+    public class Activity
+    {
+        public string Name { get; set; }
+        public DateTime DueDate { get; set; }
+        public bool Complete { get; set; }
+        public string Project { get; set; }
     }
 }
