@@ -29,11 +29,9 @@ namespace Microsoft_Band_Simulator
     /// </summary>
     public sealed partial class DeviceSettings : Page
     {
-        DateTime startDate = DateTime.Now;
         public DeviceSettings()
         {
             this.InitializeComponent();
-            PopulateProjects();
         }
 
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -113,18 +111,18 @@ namespace Microsoft_Band_Simulator
                     Setting7.devtheme = Colors.YellowGreen;
                     break;
                 case "Yellow":
-                    Band2.devtheme = Colors.Yellow;
-                    UV.devtheme = Colors.Yellow;
-                    SleepApp.devtheme = Colors.Yellow;
-                    ClockApp.devtheme = Colors.Yellow;
-                    SettingApp.devtheme = Colors.Yellow;
-                    Setting1.devtheme = Colors.Yellow;
-                    Setting2.devtheme = Colors.Yellow;
-                    Setting3.devtheme = Colors.Yellow;
-                    Setting4.devtheme = Colors.Yellow;
-                    Setting5.devtheme = Colors.Yellow;
-                    Setting6.devtheme = Colors.Yellow;
-                    Setting7.devtheme = Colors.Yellow;
+                    Band2.devtheme = Colors.Goldenrod;
+                    UV.devtheme = Colors.Goldenrod;
+                    SleepApp.devtheme = Colors.Goldenrod;
+                    ClockApp.devtheme = Colors.Goldenrod;
+                    SettingApp.devtheme = Colors.Goldenrod;
+                    Setting1.devtheme = Colors.Goldenrod;
+                    Setting2.devtheme = Colors.Goldenrod;
+                    Setting3.devtheme = Colors.Goldenrod;
+                    Setting4.devtheme = Colors.Goldenrod;
+                    Setting5.devtheme = Colors.Goldenrod;
+                    Setting6.devtheme = Colors.Goldenrod;
+                    Setting7.devtheme = Colors.Goldenrod;
                     break;
                 case "Orange":
                     Band2.devtheme = Colors.Orange;
@@ -154,7 +152,7 @@ namespace Microsoft_Band_Simulator
                     Setting6.devtheme = Colors.Red;
                     Setting7.devtheme = Colors.Red;
                     break;
-                case "Hot Pink":
+                case "Pink":
                     Band2.devtheme = Colors.HotPink;
                     UV.devtheme = Colors.HotPink;
                     SleepApp.devtheme = Colors.HotPink;
@@ -215,50 +213,15 @@ namespace Microsoft_Band_Simulator
         {
             Band2.battery = Convert.ToInt32(e.NewValue);
         }
-        private void PopulateProjects()
+
+        private void WallpaperComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<Project> Projects = new List<Project>();
+            string themeName = ThemeComboBox.Items[0].ToString();
+            string wallName = e.AddedItems[0].ToString();
+            switch (wallName)
+            {
 
-            Project newProject = new Project();
-            newProject.Name = "Project 1";
-            newProject.Activities.Add(new Activity()
-            { Name = "Activity 1", Complete = true, DueDate = startDate.AddDays(4) });
-            newProject.Activities.Add(new Activity()
-            { Name = "Activity 2", Complete = true, DueDate = startDate.AddDays(5) });
-            Projects.Add(newProject);
-
-            newProject = new Project();
-            newProject.Name = "Project 2";
-            newProject.Activities.Add(new Activity()
-            { Name = "Activity A", Complete = true, DueDate = startDate.AddDays(2) });
-            newProject.Activities.Add(new Activity()
-            { Name = "Activity B", Complete = false, DueDate = startDate.AddDays(3) });
-            Projects.Add(newProject);
-
-            newProject = new Project();
-            newProject.Name = "Project 3";
-            Projects.Add(newProject);
-
-            cvsProjects.ItemsSource = Projects;
+            }
         }
-    }
-
-    public class Project
-    {
-        public Project()
-        {
-            Activities = new ObservableCollection<Activity>();
-        }
-
-        public string Name { get; set; }
-        public ObservableCollection<Activity> Activities { get; private set; }
-    }
-
-    public class Activity
-    {
-        public string Name { get; set; }
-        public DateTime DueDate { get; set; }
-        public bool Complete { get; set; }
-        public string Project { get; set; }
     }
 }

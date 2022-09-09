@@ -19,6 +19,7 @@ using Windows.UI;
 using Windows.UI.Xaml.Media.Animation;
 using Microsoft_Band_Simulator;
 using System.Threading;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -44,6 +45,7 @@ namespace Microsoft_Band_Simulator
 
         // Public variables
         public static Color devtheme;
+        public static BitmapImage wallpaper;
         public static int battery;
         public static string time;
         public static string day;
@@ -65,6 +67,7 @@ namespace Microsoft_Band_Simulator
             Tile2.Fill = new SolidColorBrush(devtheme);
             Tile3.Fill = new SolidColorBrush(devtheme);
             Tile4.Fill = new SolidColorBrush(devtheme);
+            HomeWall.Source = wallpaper;
             // Setting battery value at launch
             batteryPercent.Value = battery;
             // Obsolete method, but is used in MSDocs. Okay to use here.

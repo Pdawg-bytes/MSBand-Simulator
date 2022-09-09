@@ -21,6 +21,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft_Band_Simulator.SettingControls;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Microsoft_Band_Simulator
 {
@@ -87,6 +88,7 @@ namespace Microsoft_Band_Simulator
                 SleepApp.devtheme = Colors.DeepSkyBlue;
                 SettingApp.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
+                Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_time.png"));
                 Setting1.devtheme = Colors.DeepSkyBlue;
                 Setting2.devtheme = Colors.DeepSkyBlue;
                 Setting3.devtheme = Colors.DeepSkyBlue;

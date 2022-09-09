@@ -21,7 +21,7 @@
                     </ProgressBar.RenderTransform>
                 </ProgressBar>
                 <Image Source="ms-appx:///Assets/Icons/battery.png" HorizontalAlignment="Left" Margin="13,26.5,0,184" Width="21" Height="90"/>
-                <Image Source="ms-appx:///Assets/cargo_fiber.png" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Height="260" Margin="45,0,0,0"/>
+                <Image VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Height="260" Margin="45,0,0,0" x:Name="HomeWall"/>
                 <TextBlock FontSize="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,5,0,0" Height="250" Width="480" x:Name="ClockTime"/>
                 <TextBlock FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="560,105,0,0" x:Name="DayName"/>
                 <TextBlock FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="560,166,0,0" x:Name="Date"/>

@@ -17,7 +17,7 @@
             <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
             <Image Source="ms-appx:///Assets/mslogo.png" Height="20" Width="20" Margin="0,-15,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,0">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,570">
             <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  Header="Select the device theme" PlaceholderText="Theme" Width="200" x:Name="ThemeComboBox">
                 <x:String>Microsoft Blue</x:String>
                 <x:String>Dark Cyan</x:String>
@@ -27,7 +27,7 @@
                 <x:String>Yellow</x:String>
                 <x:String>Orange</x:String>
                 <x:String>Red</x:String>
-                <x:String>Hot Pink</x:String>
+                <x:String>Pink</x:String>
                 <x:String>Magenta</x:String>
                 <x:String>Purple</x:String>
             </ComboBox>
@@ -35,24 +35,20 @@
             <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
             <ToggleSwitch x:Name="DynamicBatteryToggle" Header="Enable dynamic battery" Margin="0,30,0,0" ToolTipService.ToolTip="Lowers the battery value every 20-30 seconds."/>
         </StackPanel>
-        <GridView MaxHeight="500" x:Name="cvsProjects" Grid.Row="1" HorizontalAlignment="Center" IsItemClickEnabled="True">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="20">
-                        <TextBlock Text="{Binding Name}" FontWeight="Bold" 
-                                   Style="{StaticResource BaseTextBlockStyle}"/>
-                        <TextBlock Text="{Binding DueDate}" TextWrapping="NoWrap" 
-                                   Style="{StaticResource BodyTextBlockStyle}" />
-                        <Image Source="ms-appx:///Assets/Wallpaper/cargo_fiber.png" Height="130"/>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-            <GridView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
-                </ItemsPanelTemplate>
-            </GridView.ItemsPanel>
-        </GridView>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="270,30,0,570" Width="280">
+            <ComboBox Header="Select the wallpaper" PlaceholderText="Wallpaper" Width="250" x:Name="WallpaperComboBox" ToolTipService.ToolTip="Change the theme synced wallpaper" SelectionChanged="WallpaperComboBox_SelectionChanged">
+                <x:String>Blank</x:String>
+                <x:String>Chevs</x:String>
+                <x:String>Curves</x:String>
+                <x:String>Dan</x:String>
+                <x:String>Fast</x:String>
+                <x:String>Fiber</x:String>
+                <x:String>Forward</x:String>
+                <x:String>Dark</x:String>
+                <x:String>Plates</x:String>
+                <x:String>Time</x:String>
+            </ComboBox>
+        </StackPanel>
         <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="25"/>
     </Grid>
 </Page>
