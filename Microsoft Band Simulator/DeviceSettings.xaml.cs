@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -34,6 +35,8 @@ namespace Microsoft_Band_Simulator
             this.InitializeComponent();
         }
 
+        public static string devthemeSetting;
+
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string themeName = e.AddedItems[0].ToString();
@@ -42,6 +45,7 @@ namespace Microsoft_Band_Simulator
                 case "Microsoft Blue":
                 default:
                     Band2.devtheme = Colors.DeepSkyBlue;
+                    devthemeSetting = "Microsoft Blue";
                     UV.devtheme = Colors.DeepSkyBlue;
                     SleepApp.devtheme = Colors.DeepSkyBlue;
                     ClockApp.devtheme = Colors.DeepSkyBlue;
@@ -56,6 +60,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Dark Cyan":
                     Band2.devtheme = Colors.DarkCyan;
+                    devthemeSetting = "Dark Cyan";
                     UV.devtheme = Colors.DarkCyan;
                     SleepApp.devtheme = Colors.DarkCyan;
                     ClockApp.devtheme = Colors.DarkCyan;
@@ -70,6 +75,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Teal":
                     Band2.devtheme = Colors.Teal;
+                    devthemeSetting = "Teal";
                     UV.devtheme = Colors.Teal;
                     SleepApp.devtheme = Colors.Teal;
                     ClockApp.devtheme = Colors.Teal;
@@ -84,6 +90,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Light Green":
                     Band2.devtheme = Colors.LimeGreen;
+                    devthemeSetting = "Light Green";
                     UV.devtheme = Colors.LimeGreen;
                     SleepApp.devtheme = Colors.LimeGreen;
                     ClockApp.devtheme = Colors.LimeGreen;
@@ -98,6 +105,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Yellow Green":
                     Band2.devtheme = Colors.YellowGreen;
+                    devthemeSetting = "Yellow Green";
                     UV.devtheme = Colors.YellowGreen;
                     SleepApp.devtheme = Colors.YellowGreen;
                     ClockApp.devtheme = Colors.YellowGreen;
@@ -112,6 +120,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Yellow":
                     Band2.devtheme = Colors.Goldenrod;
+                    devthemeSetting = "Yellow";
                     UV.devtheme = Colors.Goldenrod;
                     SleepApp.devtheme = Colors.Goldenrod;
                     ClockApp.devtheme = Colors.Goldenrod;
@@ -126,6 +135,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Orange":
                     Band2.devtheme = Colors.Orange;
+                    devthemeSetting = "Orange";
                     UV.devtheme = Colors.Orange;
                     SleepApp.devtheme = Colors.Orange;
                     ClockApp.devtheme = Colors.Orange;
@@ -140,6 +150,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Red":
                     Band2.devtheme = Colors.Red;
+                    devthemeSetting = "Red";
                     UV.devtheme = Colors.Red;
                     SleepApp.devtheme = Colors.Red;
                     ClockApp.devtheme = Colors.Red;
@@ -154,6 +165,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Pink":
                     Band2.devtheme = Colors.HotPink;
+                    devthemeSetting = "Pink";
                     UV.devtheme = Colors.HotPink;
                     SleepApp.devtheme = Colors.HotPink;
                     ClockApp.devtheme = Colors.HotPink;
@@ -168,6 +180,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Magenta":
                     Band2.devtheme = Colors.DarkMagenta;
+                    devthemeSetting = "Magenta";
                     UV.devtheme = Colors.DarkMagenta;
                     SleepApp.devtheme = Colors.DarkMagenta;
                     ClockApp.devtheme = Colors.DarkMagenta;
@@ -182,6 +195,7 @@ namespace Microsoft_Band_Simulator
                     break;
                 case "Purple":
                     Band2.devtheme = Colors.BlueViolet;
+                    devthemeSetting = "Purple";
                     UV.devtheme = Colors.BlueViolet;
                     SleepApp.devtheme = Colors.BlueViolet;
                     ClockApp.devtheme = Colors.BlueViolet;
@@ -216,11 +230,294 @@ namespace Microsoft_Band_Simulator
 
         private void WallpaperComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string themeName = ThemeComboBox.Items[0].ToString();
             string wallName = e.AddedItems[0].ToString();
-            switch (wallName)
+            switch (devthemeSetting)
             {
-
+                case "Microsoft Blue":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_blank.png"));
+                            break;
+                        case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_chevs.png"));
+                            break;
+                        case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_curves.png"));
+                            break;
+                        case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_dan.png"));
+                            break;
+                        case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_fast.png"));
+                            break;
+                        case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_fiber.png"));
+                            break;
+                        case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_fwd.png"));
+                            break;
+                        case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_noods.png"));
+                            break;
+                        case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_plates.png"));
+                            break;
+                        case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_time.png"));
+                            break;
+                    }
+                    break;
+                case "Dark Cyan":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Teal":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Light Green":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Yellow Green":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Yellow":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Orange":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Red":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Pink":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Magenta":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
+                case "Purple":
+                    switch (wallName)
+                    {
+                        case "Blank":
+                            break;
+                        case "Chevs":
+                            break;
+                        case "Curves":
+                            break;
+                        case "Dan":
+                            break;
+                        case "Fast":
+                            break;
+                        case "Fiber":
+                            break;
+                        case "Forward":
+                            break;
+                        case "Dark":
+                            break;
+                        case "Plates":
+                            break;
+                        case "Time":
+                            break;
+                    }
+                    break;
             }
         }
     }
