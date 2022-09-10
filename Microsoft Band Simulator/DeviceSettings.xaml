@@ -17,7 +17,7 @@
             <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
             <Image Source="ms-appx:///Assets/mslogo.png" Height="20" Width="20" Margin="0,-15,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,570">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,500">
             <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  Header="Select the device theme" PlaceholderText="Theme" Width="200" x:Name="ThemeComboBox">
                 <x:String>Microsoft Blue</x:String>
                 <x:String>Dark Cyan</x:String>
@@ -33,9 +33,8 @@
             </ComboBox>
             <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
             <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
-            <ToggleSwitch x:Name="DynamicBatteryToggle" Header="Enable dynamic battery" Margin="0,30,0,0" ToolTipService.ToolTip="Lowers the battery value every 20-30 seconds."/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="270,30,0,570" Width="280">
+        <Grid Grid.Row="1" HorizontalAlignment="Left" Margin="270,30,0,570" Width="280">
             <ComboBox Header="Select the wallpaper" PlaceholderText="Wallpaper" Width="250" x:Name="WallpaperComboBox" ToolTipService.ToolTip="Change the theme synced wallpaper" SelectionChanged="WallpaperComboBox_SelectionChanged">
                 <x:String>Blank</x:String>
                 <x:String>Chevs</x:String>
@@ -48,7 +47,10 @@
                 <x:String>Plates</x:String>
                 <x:String>Time</x:String>
             </ComboBox>
-        </StackPanel>
+            <Image Height="100" x:Name="PreviewImage" Width="265" Margin="0,-40,0,0"/>
+            <Rectangle Height="102" Fill="Transparent" Width="275" StrokeThickness="4" Stroke="White" Margin="0,-40,0,0"/>
+            <TextBlock Text="Wallpaper Preview" Height="20" Width="115" Margin="-160,-165,0,0"/>
+        </Grid>
         <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="25"/>
     </Grid>
 </Page>

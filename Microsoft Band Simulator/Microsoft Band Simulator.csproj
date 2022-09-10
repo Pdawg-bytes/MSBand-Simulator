@@ -176,7 +176,6 @@
     <Content Include="Assets\BadgeLogo.scale-200.png" />
     <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\band2.svg" />
-    <Content Include="Assets\cargo_fiber.png" />
     <Content Include="Assets\Icons\airplane.png" />
     <Content Include="Assets\Icons\alarm.png" />
     <Content Include="Assets\Icons\battery.png" />

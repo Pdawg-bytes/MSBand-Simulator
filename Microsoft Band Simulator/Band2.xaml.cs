@@ -54,7 +54,7 @@ namespace Microsoft_Band_Simulator
         // Clock update
         private void Timer_Tick(object sender, object e)
         {
-            // Assigning variables to textboxz
+            // Assigning variables to textbox's
             ClockTime.Text = time;
             Date.Text = day;
             DayName.Text = dayname;
@@ -71,7 +71,7 @@ namespace Microsoft_Band_Simulator
             // Setting battery value at launch
             batteryPercent.Value = battery;
             // Obsolete method, but is used in MSDocs. Okay to use here.
-            #pragma warning disable CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
             Band2view.ScrollToHorizontalOffset(offset: 45);
             #pragma warning restore CS0618 // Type or member is obsolete
         }

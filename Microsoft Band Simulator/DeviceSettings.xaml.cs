@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Threading;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -57,6 +58,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.DeepSkyBlue;
                     Setting6.devtheme = Colors.DeepSkyBlue;
                     Setting7.devtheme = Colors.DeepSkyBlue;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_time.png"));
                     break;
                 case "Dark Cyan":
                     Band2.devtheme = Colors.DarkCyan;
@@ -72,6 +74,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.DarkCyan;
                     Setting6.devtheme = Colors.DarkCyan;
                     Setting7.devtheme = Colors.DarkCyan;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_time.png"));
                     break;
                 case "Teal":
                     Band2.devtheme = Colors.Teal;
@@ -87,6 +90,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.Teal;
                     Setting6.devtheme = Colors.Teal;
                     Setting7.devtheme = Colors.Teal;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_time.png"));
                     break;
                 case "Light Green":
                     Band2.devtheme = Colors.LimeGreen;
@@ -102,6 +106,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.LimeGreen;
                     Setting6.devtheme = Colors.LimeGreen;
                     Setting7.devtheme = Colors.LimeGreen;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_time.png"));
                     break;
                 case "Yellow Green":
                     Band2.devtheme = Colors.YellowGreen;
@@ -117,6 +122,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.YellowGreen;
                     Setting6.devtheme = Colors.YellowGreen;
                     Setting7.devtheme = Colors.YellowGreen;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_time.png"));
                     break;
                 case "Yellow":
                     Band2.devtheme = Colors.Goldenrod;
@@ -132,21 +138,23 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.Goldenrod;
                     Setting6.devtheme = Colors.Goldenrod;
                     Setting7.devtheme = Colors.Goldenrod;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_time.png"));
                     break;
                 case "Orange":
-                    Band2.devtheme = Colors.Orange;
+                    Band2.devtheme = Colors.OrangeRed;
                     devthemeSetting = "Orange";
-                    UV.devtheme = Colors.Orange;
-                    SleepApp.devtheme = Colors.Orange;
-                    ClockApp.devtheme = Colors.Orange;
-                    SettingApp.devtheme = Colors.Orange;
-                    Setting1.devtheme = Colors.Orange;
-                    Setting2.devtheme = Colors.Orange;
-                    Setting3.devtheme = Colors.Orange;
-                    Setting4.devtheme = Colors.Orange;
-                    Setting5.devtheme = Colors.Orange;
-                    Setting6.devtheme = Colors.Orange;
-                    Setting7.devtheme = Colors.Orange;
+                    UV.devtheme = Colors.OrangeRed;
+                    SleepApp.devtheme = Colors.OrangeRed;
+                    ClockApp.devtheme = Colors.OrangeRed;
+                    SettingApp.devtheme = Colors.OrangeRed;
+                    Setting1.devtheme = Colors.OrangeRed;
+                    Setting2.devtheme = Colors.OrangeRed;
+                    Setting3.devtheme = Colors.OrangeRed;
+                    Setting4.devtheme = Colors.OrangeRed;
+                    Setting5.devtheme = Colors.OrangeRed;
+                    Setting6.devtheme = Colors.OrangeRed;
+                    Setting7.devtheme = Colors.OrangeRed;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_time.png"));
                     break;
                 case "Red":
                     Band2.devtheme = Colors.Red;
@@ -162,6 +170,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.Red;
                     Setting6.devtheme = Colors.Red;
                     Setting7.devtheme = Colors.Red;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_time.png"));
                     break;
                 case "Pink":
                     Band2.devtheme = Colors.HotPink;
@@ -177,6 +186,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.HotPink;
                     Setting6.devtheme = Colors.HotPink;
                     Setting7.devtheme = Colors.HotPink;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_time.png"));
                     break;
                 case "Magenta":
                     Band2.devtheme = Colors.DarkMagenta;
@@ -192,6 +202,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.DarkMagenta;
                     Setting6.devtheme = Colors.DarkMagenta;
                     Setting7.devtheme = Colors.DarkMagenta;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_time.png"));
                     break;
                 case "Purple":
                     Band2.devtheme = Colors.BlueViolet;
@@ -207,6 +218,7 @@ namespace Microsoft_Band_Simulator
                     Setting5.devtheme = Colors.BlueViolet;
                     Setting6.devtheme = Colors.BlueViolet;
                     Setting7.devtheme = Colors.BlueViolet;
+                    Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_time.png"));
                     break;
 
             }
@@ -234,6 +246,7 @@ namespace Microsoft_Band_Simulator
             switch (devthemeSetting)
             {
                 case "Microsoft Blue":
+                default:
                     switch (wallName)
                     {
                         case "Blank":
@@ -272,24 +285,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/skyline_time.png"));
                             break;
                     }
                     break;
@@ -297,24 +320,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/kale_time.png"));
                             break;
                     }
                     break;
@@ -322,24 +355,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cyber_time.png"));
                             break;
                     }
                     break;
@@ -347,24 +390,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/lime_time.png"));
                             break;
                     }
                     break;
@@ -372,24 +425,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tangerine_time.png"));
                             break;
                     }
                     break;
@@ -397,24 +460,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/tang_time.png"));
                             break;
                     }
                     break;
@@ -422,24 +495,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/coral_time.png"));
                             break;
                     }
                     break;
@@ -447,24 +530,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/koolaid_time.png"));
                             break;
                     }
                     break;
@@ -472,24 +565,34 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/berry_time.png"));
                             break;
                     }
                     break;
@@ -497,28 +600,39 @@ namespace Microsoft_Band_Simulator
                     switch (wallName)
                     {
                         case "Blank":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_blank.png"));
                             break;
                         case "Chevs":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_chevs.png"));
                             break;
                         case "Curves":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_curves.png"));
                             break;
                         case "Dan":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_dan.png"));
                             break;
                         case "Fast":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_fast.png"));
                             break;
                         case "Fiber":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_fiber.png"));
                             break;
                         case "Forward":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_fwd.png"));
                             break;
                         case "Dark":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_noods.png"));
                             break;
                         case "Plates":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_plates.png"));
                             break;
                         case "Time":
+                            Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/cargo_time.png"));
                             break;
                     }
                     break;
             }
+            PreviewImage.Source = Band2.wallpaper;
         }
     }
 }
