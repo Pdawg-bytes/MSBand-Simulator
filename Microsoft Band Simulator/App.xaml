@@ -4,5 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Microsoft_Band_Simulator"
     RequestedTheme="Dark">
-
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <AcrylicBrush x:Key="ContentDialogAcrylicBrush"
+                          TintColor="Black"
+                          BackgroundSource="Backdrop"
+                          TintOpacity="0.1"
+                          FallbackColor="DimGray"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
