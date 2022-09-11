@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
-            <Image Source="ms-appx:///Assets/mslogo.png" Height="20" Width="20" Margin="0,-15,0,0"/>
+            <Image Source="ms-appx:///Assets/bandiconcrop.png" Height="40" Width="40" Margin="0,-27,0,0"/>
         </StackPanel>
         <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,500">
             <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  Header="Select the device theme" PlaceholderText="Theme" Width="200" x:Name="ThemeComboBox">

@@ -7,12 +7,16 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using System.Diagnostics;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
+using Windows.UI;
+using Windows.UI.Xaml.Media.Animation;
+using Microsoft_Band_Simulator;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,6 +30,7 @@ namespace Microsoft_Band_Simulator
         public MainPage()
         {
             this.InitializeComponent();
+            NotificationButton.IsEnabled = false;
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
@@ -34,6 +39,7 @@ namespace Microsoft_Band_Simulator
             Band2Frame.Navigate(typeof(Band2), null, new SuppressNavigationTransitionInfo());
             Band2Frame.Visibility = Visibility.Visible;
             pwon.IsEnabled = false;
+            NotificationButton.IsEnabled = true;
         }
 
         private void OffButton_Click(object sender, RoutedEventArgs e)
@@ -41,6 +47,7 @@ namespace Microsoft_Band_Simulator
             // Will hide frame and re-enable pwon button
             pwon.IsEnabled = true;
             Band2Frame.Visibility = Visibility.Collapsed;
+            NotificationButton.IsEnabled = false;
         }
 
         private void DevSettingsButton_Click(object sender, RoutedEventArgs e)
@@ -48,9 +55,22 @@ namespace Microsoft_Band_Simulator
             this.Frame.Navigate(typeof(DeviceSettings), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
         }
 
-        private void NotificationButton_Click(object sender, RoutedEventArgs e)
+        private async void NotificationButton_Click(object sender, RoutedEventArgs e)
         {
+            // Show the custom dialog
+            NewNotificationDialog dialog = new NewNotificationDialog();
+            await dialog.ShowAsync();
 
+            if (dialog.Result == NotifResult.Create)
+            {
+                Band2Frame.Navigate(typeof(NotificationTemplate), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
+                // Add actions
+
+            }
+            else if (dialog.Result == NotifResult.Cancel)
+            {
+                // Do nothing
+            }
         }
     }
 }

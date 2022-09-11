@@ -84,6 +84,7 @@ namespace Microsoft_Band_Simulator
                 // Setting defaults
                 Band2.devtheme = Colors.DeepSkyBlue;
                 UV.devtheme = Colors.DeepSkyBlue;
+                NotificationTemplate.devtheme = Colors.DeepSkyBlue;
                 ClockApp.devtheme = Colors.DeepSkyBlue;
                 SleepApp.devtheme = Colors.DeepSkyBlue;
                 SettingApp.devtheme = Colors.DeepSkyBlue;
@@ -125,6 +126,8 @@ namespace Microsoft_Band_Simulator
             Band2.time = DateTime.Now.ToString("hh:mm");
             Band2.day = DateTime.Today.Day.ToString("00");
             Band2.dayname = DateTime.Now.ToString("ddd");
+            NotificationTemplate.NotifTime = DateTime.Now.ToString("hh:mm tt");
+            NotificationTemplate.NotifDate = DateTime.Now.ToString("MM/dd");
         }
 
         /// <summary>

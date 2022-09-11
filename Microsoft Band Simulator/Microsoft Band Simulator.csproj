@@ -131,6 +131,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewNotificationDialog.xaml.cs">
+      <DependentUpon>NewNotificationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationTemplate.xaml.cs">
+      <DependentUpon>NotificationTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingApp.xaml.cs">
       <DependentUpon>SettingApp.xaml</DependentUpon>
@@ -176,6 +182,7 @@
     <Content Include="Assets\BadgeLogo.scale-200.png" />
     <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\band2.svg" />
+    <Content Include="Assets\bandiconcrop.png" />
     <Content Include="Assets\Icons\airplane.png" />
     <Content Include="Assets\Icons\alarm.png" />
     <Content Include="Assets\Icons\battery.png" />
@@ -210,7 +217,6 @@
     <Content Include="Assets\LargeTile.scale-150.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
-    <Content Include="Assets\mslogo.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
     <Content Include="Assets\SmallTile.scale-150.png" />
@@ -469,6 +475,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewNotificationDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NotificationTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingApp.xaml">
       <SubType>Designer</SubType>
