@@ -2,10 +2,12 @@
     x:Class="Microsoft_Band_Simulator.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:local="using:Microsoft_Band_Simulator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
 
     <Grid x:Name="grid" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
         <Grid.RowDefinitions>
@@ -26,6 +28,17 @@
             <AppBarSeparator/>
             <AppBarButton Icon="PreviewLink" Label="Create Notification" Click="NotificationButton_Click" x:Name="NotificationButton"/>
         </CommandBar>
+        <muxc:TeachingTip x:Name="ResTeachingTip"
+            Title="The screen resolution is not optimal"
+	        Subtitle="This app requires at least a 1920x1080 resolution so the Band icon can scale to its maximum size. Please change your resolution."
+	        PreferredPlacement="Auto"
+            Background="{ThemeResource ElementAcrylicBrush}"
+            CloseButtonStyle="{ThemeResource AccentButtonStyle}"
+	        PlacementMargin="14"
+	        IsLightDismissEnabled="True"
+	        ActionButtonContent="Close"
+	        CloseButtonContent="Got it!">
+        </muxc:TeachingTip>
         <Frame x:Name="Band2Frame" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="254" Width="686" Margin="0,0,0,0" MinHeight="254" MinWidth="686">
             <Frame.ContentTransitions>
                 <TransitionCollection>

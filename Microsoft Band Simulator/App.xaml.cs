@@ -22,6 +22,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft_Band_Simulator.SettingControls;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Graphics.Display;
 
 namespace Microsoft_Band_Simulator
 {
@@ -77,7 +78,10 @@ namespace Microsoft_Band_Simulator
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
-                
+
+                // Gets screen resoulution
+                GetScreenResolutionInfo();
+
                 // Add acrylic to TitleBar
                 ExtendAcrylicIntoTitleBar();
 
@@ -109,6 +113,7 @@ namespace Microsoft_Band_Simulator
             }
         }
 
+
         // Extend Acrylic Into Titlebar Function
         private void ExtendAcrylicIntoTitleBar()
         {
@@ -119,7 +124,23 @@ namespace Microsoft_Band_Simulator
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
 
-
+        // Get screen resoultion
+        public static Size GetScreenResolutionInfo()
+        {
+            var applicationView = ApplicationView.GetForCurrentView();
+            var displayInformation = DisplayInformation.GetForCurrentView();
+            var bounds = applicationView.VisibleBounds;
+            var size = new Size(bounds.Width, bounds.Height);
+            if (bounds.Width < 1920)
+            {
+                MainPage.ResTeachOpen = true;
+            }
+            else
+            {
+                MainPage.ResTeachOpen = false;
+            }
+            return size;
+        }
 
         private void DTW_Tick(object sender, object e)
         {
