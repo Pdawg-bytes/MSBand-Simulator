@@ -645,5 +645,10 @@ namespace Microsoft_Band_Simulator
             }
             PreviewImage.Source = Band2.wallpaper;
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            PreviewImage.Source = Band2.wallpaper;
+        }
     }
 }

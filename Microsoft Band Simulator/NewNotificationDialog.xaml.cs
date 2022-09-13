@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft_Band_Simulator;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +31,9 @@ namespace Microsoft_Band_Simulator
         public NewNotificationDialog()
         {
             this.InitializeComponent();
+            CreateButton.IsEnabled = false;
+            NotificationContent.Text = "";
+            NotificationTitleBox.Text = "";
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
@@ -48,11 +52,12 @@ namespace Microsoft_Band_Simulator
 
         private void NotificationContent_TextChanged(object sender, TextChangedEventArgs e)
         {
+            CreateButton.IsEnabled = (NotificationContent.Text != "") && (NotificationTitleBox.Text != "");
             NotificationTemplate.NotifContent = NotificationContent.Text;
         }
-
         private void NotificationTitleBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            CreateButton.IsEnabled = (NotificationContent.Text != "") && (NotificationTitleBox.Text != "");
             NotificationTemplate.NotifTitle = NotificationTitleBox.Text;
         }
     }

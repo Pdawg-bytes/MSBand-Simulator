@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}"
+    Loaded="Page_Loaded">
 
     <Grid x:Name="settings_grid">
         <Grid.RowDefinitions>
@@ -17,7 +18,7 @@
             <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
             <Image Source="ms-appx:///Assets/bandiconcrop.png" Height="40" Width="40" Margin="0,-27,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,500">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,420">
             <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  Header="Select the device theme" PlaceholderText="Theme" Width="200" x:Name="ThemeComboBox">
                 <x:String>Microsoft Blue</x:String>
                 <x:String>Dark Cyan</x:String>
@@ -34,7 +35,7 @@
             <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
             <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
         </StackPanel>
-        <Grid Grid.Row="1" HorizontalAlignment="Left" Margin="270,30,0,570" Width="280">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="270,30,0,420" Width="280">
             <ComboBox Header="Select the wallpaper" PlaceholderText="Wallpaper" Width="250" x:Name="WallpaperComboBox" ToolTipService.ToolTip="Change the theme synced wallpaper" SelectionChanged="WallpaperComboBox_SelectionChanged">
                 <x:String>Blank</x:String>
                 <x:String>Chevs</x:String>
@@ -47,10 +48,9 @@
                 <x:String>Plates</x:String>
                 <x:String>Time</x:String>
             </ComboBox>
-            <Image Height="100" x:Name="PreviewImage" Width="265" Margin="0,-40,0,0"/>
-            <Rectangle Height="102" Fill="Transparent" Width="275" StrokeThickness="4" Stroke="White" Margin="0,-40,0,0"/>
-            <TextBlock Text="Wallpaper Preview" Height="20" Width="115" Margin="-160,-165,0,0"/>
-        </Grid>
-        <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="25"/>
+            <TextBlock Text="Wallpaper Preview" Height="20" Width="115" Margin="-164,35,0,0"/>
+            <Image Height="100" x:Name="PreviewImage" Width="265" Margin="-15,5,0,0"/>
+        </StackPanel>
+        <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="20"/>
     </Grid>
 </Page>

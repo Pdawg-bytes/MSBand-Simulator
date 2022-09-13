@@ -2,6 +2,7 @@
     x:Class="Microsoft_Band_Simulator.SettingControls.Setting1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    RequestedTheme="Dark"
     xmlns:local="using:Microsoft_Band_Simulator.SettingControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"

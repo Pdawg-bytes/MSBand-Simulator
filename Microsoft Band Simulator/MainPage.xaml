@@ -19,25 +19,29 @@
             <Image Source="ms-appx:///Assets/bandiconcrop.png" Height="40" Width="40" Margin="0,-27,0,0"/>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
-            <Image Source="ms-appx:///Assets/band2.svg" Height="900"/>
+            <Image Source="ms-appx:///Assets/band2cropped.svg" Height="408" Margin="4,13,0,0"/>
         </StackPanel>
         <CommandBar Background="Transparent" DefaultLabelPosition="Right" HorizontalAlignment="Center" Grid.Row="1">
             <AppBarButton Icon="Play" Label="Power on" Click="StartButton_Click" x:Name="pwon" />
             <AppBarButton Icon="Stop" Label="Power off" Click="OffButton_Click" x:Name="pwoff"/>
             <AppBarButton Icon="Setting" Label="Device Settings" Click="DevSettingsButton_Click"/>
             <AppBarSeparator/>
-            <AppBarButton Icon="PreviewLink" Label="Create Notification" Click="NotificationButton_Click" x:Name="NotificationButton"/>
+            <AppBarButton Icon="Add" Label="Create Notification" Click="NotificationButton_Click" x:Name="NotificationButton"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Setting" Label="About"/>
+            </CommandBar.SecondaryCommands>
+
         </CommandBar>
         <muxc:TeachingTip x:Name="ResTeachingTip"
             Title="The screen resolution is not optimal"
-	        Subtitle="This app requires at least a 1920x1080 resolution so the Band icon can scale to its maximum size. Please change your resolution."
+	        Subtitle="This app requires at least a 1366x768 resolution so the Band icon can scale to its maximum size. Please change your resolution."
 	        PreferredPlacement="Auto"
             Background="{ThemeResource ElementAcrylicBrush}"
             CloseButtonStyle="{ThemeResource AccentButtonStyle}"
 	        PlacementMargin="14"
 	        IsLightDismissEnabled="True"
-	        ActionButtonContent="Close"
-	        CloseButtonContent="Got it!">
+	        ActionButtonContent="Got it!"
+	        CloseButtonContent="Close">
         </muxc:TeachingTip>
         <Frame x:Name="Band2Frame" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="254" Width="686" Margin="0,0,0,0" MinHeight="254" MinWidth="686">
             <Frame.ContentTransitions>

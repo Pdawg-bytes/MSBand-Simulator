@@ -131,7 +131,15 @@ namespace Microsoft_Band_Simulator
             var displayInformation = DisplayInformation.GetForCurrentView();
             var bounds = applicationView.VisibleBounds;
             var size = new Size(bounds.Width, bounds.Height);
-            if (bounds.Width < 1920)
+            if (bounds.Width < 1366)
+            {
+                MainPage.ResTeachOpen = true;
+            }
+            else
+            {
+                MainPage.ResTeachOpen = false;
+            }
+            if (bounds.Height < 700)
             {
                 MainPage.ResTeachOpen = true;
             }
