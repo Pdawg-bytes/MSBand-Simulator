@@ -7,4 +7,7 @@ To build this app, you need the Windows10SDK 19041 installed and UWP support in 
 # Screenshots
 ![image](https://user-images.githubusercontent.com/83825746/188160224-fa26e31f-c9c9-4d78-b014-d22aa63d229b.png)
 ![image](https://user-images.githubusercontent.com/83825746/188160334-c12a2c2a-99db-4d31-be10-5bccd119e5e6.png)
+![image](https://user-images.githubusercontent.com/83825746/190008353-0c24485a-fb8c-4374-82cc-82652fee109e.png)
+![image](https://user-images.githubusercontent.com/83825746/190008390-680f6c8f-f751-4e19-8119-a02581704da3.png)
+![image](https://user-images.githubusercontent.com/83825746/190008465-203b1537-00a8-4769-935f-47fc19b4c8b4.png)
 
