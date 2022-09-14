@@ -19,16 +19,20 @@
             <Image Source="ms-appx:///Assets/bandiconcrop.png" Height="40" Width="40" Margin="0,-27,0,0"/>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
-            <Image Source="ms-appx:///Assets/band2cropped.svg" Height="408" Margin="4,13,0,0"/>
+            <Image Source="ms-appx:///Assets/band2cropped.svg" Height="406" Margin="4,13,0,0"/>
         </StackPanel>
         <CommandBar Background="Transparent" DefaultLabelPosition="Right" HorizontalAlignment="Center" Grid.Row="1">
             <AppBarButton Icon="Play" Label="Power on" Click="StartButton_Click" x:Name="pwon" />
             <AppBarButton Icon="Stop" Label="Power off" Click="OffButton_Click" x:Name="pwoff"/>
             <AppBarButton Icon="Setting" Label="Device Settings" Click="DevSettingsButton_Click"/>
             <AppBarSeparator/>
-            <AppBarButton Icon="Add" Label="Create Notification" Click="NotificationButton_Click" x:Name="NotificationButton"/>
+            <AppBarButton Label="Create Notification" Click="NotificationButton_Click" x:Name="NotificationButton">
+                <AppBarButton.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7E7;"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
             <CommandBar.SecondaryCommands>
-                <AppBarButton Icon="Setting" Label="About"/>
+                <AppBarButton Label="About" x:Name="AboutButton" Click="AboutButton_Click"/>
             </CommandBar.SecondaryCommands>
 
         </CommandBar>

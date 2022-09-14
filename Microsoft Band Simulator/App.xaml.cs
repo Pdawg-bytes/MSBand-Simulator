@@ -23,6 +23,7 @@ using Windows.UI.Xaml.Navigation;
 using Microsoft_Band_Simulator.SettingControls;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Graphics.Display;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Microsoft_Band_Simulator
 {
@@ -82,6 +83,12 @@ namespace Microsoft_Band_Simulator
                 // Gets screen resoulution
                 GetScreenResolutionInfo();
 
+                // Gets app version
+                GetAppVersion();
+
+                // Gets app arch
+                GetAppArch();
+
                 // Add acrylic to TitleBar
                 ExtendAcrylicIntoTitleBar();
 
@@ -122,6 +129,20 @@ namespace Microsoft_Band_Simulator
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+        }
+
+        public static string GetAppVersion()
+        {
+            Package package = Package.Current;
+            PackageId packageId = package.Id;
+            PackageVersion version = packageId.Version;
+            return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
+        }
+
+        private void GetAppArch()
+        {
+            string packagearch = Package.Current.Id.Architecture.ToString();
+
         }
 
         // Get screen resoultion

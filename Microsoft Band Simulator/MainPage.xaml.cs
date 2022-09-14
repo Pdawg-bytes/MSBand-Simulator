@@ -76,5 +76,11 @@ namespace Microsoft_Band_Simulator
         {
             ResTeachingTip.IsOpen = ResTeachOpen;
         }
+
+        private async void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            AboutDialog dialog = new AboutDialog();
+            await dialog.ShowAsync();
+        }
     }
 }

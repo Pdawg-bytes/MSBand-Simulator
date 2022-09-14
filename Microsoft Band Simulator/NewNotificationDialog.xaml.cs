@@ -40,14 +40,14 @@ namespace Microsoft_Band_Simulator
         {
             this.Result = NotifResult.Create;
             // Close the dialog
-            dialog.Hide();
+            NotifDialog.Hide();
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Result = NotifResult.Cancel;
             // Close the dialog
-            dialog.Hide();
+            NotifDialog.Hide();
         }
 
         private void NotificationContent_TextChanged(object sender, TextChangedEventArgs e)

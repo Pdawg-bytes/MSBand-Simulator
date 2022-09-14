@@ -116,6 +116,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AboutDialog.xaml.cs">
+      <DependentUpon>AboutDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -184,6 +187,7 @@
     <Content Include="Assets\band2.svg" />
     <Content Include="Assets\band2cropped.svg" />
     <Content Include="Assets\bandiconcrop.png" />
+    <Content Include="Assets\bandiconshadow.png" />
     <Content Include="Assets\Icons\airplane.png" />
     <Content Include="Assets\Icons\alarm.png" />
     <Content Include="Assets\Icons\battery.png" />
@@ -461,6 +465,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Band2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -534,9 +542,7 @@
       <Version>2.1.190606001</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utilities\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
