@@ -30,10 +30,19 @@ namespace Microsoft_Band_Simulator
             this.InitializeComponent();
         }
 
+        public static string AppVerDialog;
+        public static string AppArchDialog;
+
         private void AboutCloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Result = AboutResult.Close;
-            AboutDialog.Hide();
+            AboutDialogContent.Hide();
+        }
+
+        private void AboutDialogContent_Loaded(object sender, RoutedEventArgs e)
+        {
+            AppArchText.Text = AppArchDialog;
+            AppVerText.Text = "Application Version: " + AppVerDialog;
         }
     }
 }

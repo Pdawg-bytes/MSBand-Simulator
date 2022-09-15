@@ -131,18 +131,35 @@ namespace Microsoft_Band_Simulator
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
 
-        public static string GetAppVersion()
+        private void GetAppVersion()
         {
-            Package package = Package.Current;
-            PackageId packageId = package.Id;
-            PackageVersion version = packageId.Version;
-            return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
+            string AppVersionSTR = GetType().Assembly.GetName().Version.ToString();
+            AboutDialog.AppVerDialog = AppVersionSTR;
         }
 
         private void GetAppArch()
         {
             string packagearch = Package.Current.Id.Architecture.ToString();
-
+            if (Package.Current.Id.Architecture == Windows.System.ProcessorArchitecture.X64)
+            {
+                AboutDialog.AppArchDialog = "App Architecture: x64";
+            }
+            else if (Package.Current.Id.Architecture == Windows.System.ProcessorArchitecture.X86)
+            {
+                AboutDialog.AppArchDialog = "App Architecture: x86";
+            }
+            else if (Package.Current.Id.Architecture == Windows.System.ProcessorArchitecture.Arm64)
+            {
+                AboutDialog.AppArchDialog = "App Architecture: ARM64";
+            }
+            else if (Package.Current.Id.Architecture == Windows.System.ProcessorArchitecture.Arm)
+            {
+                AboutDialog.AppArchDialog = "App Architecture: ARM32";
+            }
+            else
+            {
+                AboutDialog.AppArchDialog = "Unknown";
+            }
         }
 
         // Get screen resoultion

@@ -6,11 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Name="AboutDialog"
+    Loaded="AboutDialogContent_Loaded"
+    x:Name="AboutDialogContent"
     Background="{ThemeResource ElementAcrylicBrush}"
     Title="About Microsoft Band Simulator">
 
-    <Grid>
-        <Button VerticalAlignment="Bottom" Height="30" Width="280" Content="Close" x:Name="AboutCloseButton" Click="AboutCloseButton_Click"/>
+    <Grid Height="200">
+        <Rectangle Height="3" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,-10,0,0" Fill="{ThemeResource SystemAccentColor}" />
+        <TextBlock Text="App Information" FontSize="18" FontWeight="Medium" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-6,0,0"/>
+        <TextBlock Text="App Architecture: X64" FontSize="15" Width="180" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,16,0,0" x:Name="AppArchText"/>
+        <TextBlock Text="App Version: 9.9.9.9" FontSize="15" Width="180" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,34,0,0" x:Name="AppVerText"/>
+        <Button VerticalAlignment="Bottom" Height="32" Width="280" Content="Close" x:Name="AboutCloseButton" Click="AboutCloseButton_Click" HorizontalAlignment="Center" Background="{ThemeResource SystemControlBackgroundAccentBrush}"/>
     </Grid>
 </ContentDialog>
