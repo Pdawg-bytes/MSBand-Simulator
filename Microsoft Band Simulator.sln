@@ -7,16 +7,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft Band Simulator", 
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
 		Debug|ARM64 = Debug|ARM64
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|ARM = Release|ARM
 		Release|ARM64 = Release|ARM64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|ARM.ActiveCfg = Debug|ARM
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|ARM.Build.0 = Debug|ARM
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -29,6 +34,9 @@ Global
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|x86.ActiveCfg = Debug|x86
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|x86.Build.0 = Debug|x86
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Debug|x86.Deploy.0 = Debug|x86
+		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Release|ARM.ActiveCfg = Release|ARM
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Release|ARM.Build.0 = Release|ARM
 		{CDA7DB68-EE53-4D63-B968-D5057A42B046}.Release|ARM.Deploy.0 = Release|ARM

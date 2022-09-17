@@ -8,8 +8,8 @@
 
   <Identity
     Name="5f6719b8-b386-40db-98c4-ae6dca1f6006"
-    Publisher="CN=pgago"
-    Version="1.0.0.0" />
+    Publisher="CN=Pdawg Studios"
+    Version="1.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="5f6719b8-b386-40db-98c4-ae6dca1f6006" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -38,7 +38,7 @@
         Description="Microsoft Band Simulator is a full UI simulation of the discontinued Microsoft Band 2. This app does not emulate the device, rather simulates it. There are many features built into this app, allowing you to interact with the simulated device. Enjoy!"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.scale-400.scale-400.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
