@@ -24,6 +24,7 @@
                           FallbackColor="DimGray"/>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
+            <FontFamily x:Key="KSymbolFontFamily">/Assets/Fonts/ProjectKSymbolRegular.ttf#ProjectKSymbol</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

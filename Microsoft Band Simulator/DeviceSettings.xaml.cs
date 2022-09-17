@@ -48,6 +48,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.DeepSkyBlue;
                     devthemeSetting = "Microsoft Blue";
                     UV.devtheme = Colors.DeepSkyBlue;
+                    HealthUI.devtheme = Colors.DeepSkyBlue;
                     NotificationTemplate.devtheme = Colors.DeepSkyBlue;
                     SleepApp.devtheme = Colors.DeepSkyBlue;
                     ClockApp.devtheme = Colors.DeepSkyBlue;
@@ -65,6 +66,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.DarkCyan;
                     devthemeSetting = "Dark Cyan";
                     UV.devtheme = Colors.DarkCyan;
+                    HealthUI.devtheme = Colors.DarkCyan;
                     NotificationTemplate.devtheme = Colors.DarkCyan;
                     SleepApp.devtheme = Colors.DarkCyan;
                     ClockApp.devtheme = Colors.DarkCyan;
@@ -82,6 +84,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.Teal;
                     devthemeSetting = "Teal";
                     UV.devtheme = Colors.Teal;
+                    HealthUI.devtheme = Colors.Teal;
                     NotificationTemplate.devtheme = Colors.Teal;
                     SleepApp.devtheme = Colors.Teal;
                     ClockApp.devtheme = Colors.Teal;
@@ -99,6 +102,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.LimeGreen;
                     devthemeSetting = "Light Green";
                     UV.devtheme = Colors.LimeGreen;
+                    HealthUI.devtheme = Colors.LimeGreen;
                     NotificationTemplate.devtheme = Colors.LimeGreen;
                     SleepApp.devtheme = Colors.LimeGreen;
                     ClockApp.devtheme = Colors.LimeGreen;
@@ -116,6 +120,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.YellowGreen;
                     devthemeSetting = "Yellow Green";
                     UV.devtheme = Colors.YellowGreen;
+                    HealthUI.devtheme = Colors.YellowGreen;
                     NotificationTemplate.devtheme = Colors.YellowGreen;
                     SleepApp.devtheme = Colors.YellowGreen;
                     ClockApp.devtheme = Colors.YellowGreen;
@@ -133,6 +138,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.Goldenrod;
                     devthemeSetting = "Yellow";
                     UV.devtheme = Colors.Goldenrod;
+                    HealthUI.devtheme = Colors.Goldenrod;
                     NotificationTemplate.devtheme = Colors.Goldenrod;
                     SleepApp.devtheme = Colors.Goldenrod;
                     ClockApp.devtheme = Colors.Goldenrod;
@@ -150,6 +156,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.OrangeRed;
                     devthemeSetting = "Orange";
                     UV.devtheme = Colors.OrangeRed;
+                    HealthUI.devtheme = Colors.OrangeRed;
                     NotificationTemplate.devtheme = Colors.OrangeRed;
                     SleepApp.devtheme = Colors.OrangeRed;
                     ClockApp.devtheme = Colors.OrangeRed;
@@ -167,6 +174,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.Red;
                     devthemeSetting = "Red";
                     UV.devtheme = Colors.Red;
+                    HealthUI.devtheme = Colors.Red;
                     NotificationTemplate.devtheme = Colors.Red;
                     SleepApp.devtheme = Colors.Red;
                     ClockApp.devtheme = Colors.Red;
@@ -184,6 +192,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.HotPink;
                     devthemeSetting = "Pink";
                     UV.devtheme = Colors.HotPink;
+                    HealthUI.devtheme = Colors.HotPink;
                     NotificationTemplate.devtheme = Colors.HotPink;
                     SleepApp.devtheme = Colors.HotPink;
                     ClockApp.devtheme = Colors.HotPink;
@@ -201,6 +210,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.DarkMagenta;
                     devthemeSetting = "Magenta";
                     UV.devtheme = Colors.DarkMagenta;
+                    HealthUI.devtheme = Colors.DarkMagenta;
                     NotificationTemplate.devtheme = Colors.DarkMagenta;
                     SleepApp.devtheme = Colors.DarkMagenta;
                     ClockApp.devtheme = Colors.DarkMagenta;
@@ -218,6 +228,7 @@ namespace Microsoft_Band_Simulator
                     Band2.devtheme = Colors.BlueViolet;
                     devthemeSetting = "Purple";
                     UV.devtheme = Colors.BlueViolet;
+                    HealthUI.devtheme = Colors.BlueViolet;
                     NotificationTemplate.devtheme = Colors.BlueViolet;
                     SleepApp.devtheme = Colors.BlueViolet;
                     ClockApp.devtheme = Colors.BlueViolet;

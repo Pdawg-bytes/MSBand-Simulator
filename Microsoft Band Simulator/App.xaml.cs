@@ -99,6 +99,7 @@ namespace Microsoft_Band_Simulator
                 ClockApp.devtheme = Colors.DeepSkyBlue;
                 SleepApp.devtheme = Colors.DeepSkyBlue;
                 SettingApp.devtheme = Colors.DeepSkyBlue;
+                HealthUI.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
                 Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_time.png"));
                 Setting1.devtheme = Colors.DeepSkyBlue;

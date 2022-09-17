@@ -39,6 +39,7 @@
                 <Button x:Name="AlarmOpen" Height="261" Width="216" Margin="923,0,0,0" Opacity="0" Click="AlarmOpen_Click"/>
                 <Button x:Name="SleepOpen" Height="261" Width="206" Margin="1144,0,0,0" Opacity="0" Click="SleepOpen_Click"/>
                 <Button x:Name="SettingOpen" Height="261" Width="215" Margin="1356,0,0,0" Opacity="0" Click="SettingOpen_Click"/>
+                <Button x:Name="HealthHomeOpen" HorizontalAlignment="Left" VerticalAlignment="Center" Height="261" Width="672" Margin="45,0,0,0" Click="HealthHomeOpen_Click"/>
             </Grid>
         </ScrollViewer>
     </Grid>

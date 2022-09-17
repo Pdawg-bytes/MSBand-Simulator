@@ -115,5 +115,10 @@ namespace Microsoft_Band_Simulator
         {
             this.Frame.Navigate(typeof(SleepApp), null, new DrillInNavigationTransitionInfo());
         }
+
+        private void HealthHomeOpen_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(HealthUI), null, new DrillInNavigationTransitionInfo());
+        }
     }
 }
