@@ -52,7 +52,6 @@
             </ComboBox>
             <TextBlock Text="Wallpaper Preview" Height="20" Width="115" Margin="-164,35,0,0"/>
             <Image Height="100" x:Name="PreviewImage" Width="265" Margin="-15,5,0,0"/>
-            <muxc:NumberBox Header="Steps" Margin="0,30,0,0" x:Name="StepsNumber" PlaceholderText="0 - 10,000" Minimum="0" Maximum="10000"/>
         </StackPanel>
         <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="20"/>
     </Grid>
