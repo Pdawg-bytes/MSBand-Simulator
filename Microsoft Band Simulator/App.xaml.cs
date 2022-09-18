@@ -102,6 +102,13 @@ namespace Microsoft_Band_Simulator
                 HealthUI.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
                 Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_time.png"));
+                Band2.HRIcon = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart_dark.png"));
+                Setting5.IsToggleOnS5 = false;
+                HealthUI.HRVal = 75;
+                DeviceSettings.HRSliderEnabled = false;
+                DeviceSettings.BatSliderCache = 100;
+                DeviceSettings.NameCache = "Band 2";
+                DeviceSettings.HrSliderCache = 75;
                 Setting1.devtheme = Colors.DeepSkyBlue;
                 Setting2.devtheme = Colors.DeepSkyBlue;
                 Setting3.devtheme = Colors.DeepSkyBlue;

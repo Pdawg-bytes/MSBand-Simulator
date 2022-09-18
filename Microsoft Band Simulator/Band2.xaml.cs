@@ -46,6 +46,7 @@ namespace Microsoft_Band_Simulator
         // Public variables
         public static Color devtheme;
         public static BitmapImage wallpaper;
+        public static BitmapImage HRIcon;
         public static int battery;
         public static string time;
         public static string day;
@@ -68,6 +69,7 @@ namespace Microsoft_Band_Simulator
             Tile3.Fill = new SolidColorBrush(devtheme);
             Tile4.Fill = new SolidColorBrush(devtheme);
             HomeWall.Source = wallpaper;
+            HRBandIcon.Source = HRIcon;
             // Setting battery value at launch
             batteryPercent.Value = battery;
             // Obsolete method, but is used in MSDocs. Okay to use here.

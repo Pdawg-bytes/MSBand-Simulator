@@ -37,6 +37,10 @@ namespace Microsoft_Band_Simulator
         }
 
         public static string devthemeSetting;
+        public static int BatSliderCache;
+        public static string NameCache;
+        public static int HrSliderCache;
+        public static bool HRSliderEnabled;
 
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -255,11 +259,19 @@ namespace Microsoft_Band_Simulator
         private void DeviceName_TextChanged(object sender, TextChangedEventArgs e)
         {
             Setting6.bandname = DeviceName.Text;
+            NameCache = DeviceName.Text;
         }
 
         private void BatteryPercentSet_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
             Band2.battery = Convert.ToInt32(e.NewValue);
+            BatSliderCache = Convert.ToInt32(e.NewValue);
+        }
+
+        private void HeartRateSet_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            HealthUI.HRVal = Convert.ToInt32(e.NewValue);
+            HrSliderCache = Convert.ToInt32(e.NewValue);
         }
 
         private void WallpaperComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -660,6 +672,10 @@ namespace Microsoft_Band_Simulator
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             PreviewImage.Source = Band2.wallpaper;
+            DeviceName.Text = NameCache;
+            BatteryPercentSet.Value = BatSliderCache;
+            HeartRateSet.Value = HrSliderCache;
+            HeartRateSet.IsEnabled = HRSliderEnabled;
         }
     }
 }

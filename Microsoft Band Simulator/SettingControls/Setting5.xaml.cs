@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml.Media.Animation;
 using Microsoft_Band_Simulator;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -39,6 +40,7 @@ namespace Microsoft_Band_Simulator.SettingControls
         }
 
         public static Color devtheme;
+        public static bool IsToggleOnS5;
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -49,6 +51,7 @@ namespace Microsoft_Band_Simulator.SettingControls
         {
             Setting5Sidebar.Fill = new SolidColorBrush(devtheme);
             HRLabel.Foreground = new SolidColorBrush(devtheme);
+            HRToggle.IsChecked = IsToggleOnS5;
             HRToggle.Background = new SolidColorBrush(Color.FromArgb(100, 56, 52, 52));
         }
 
@@ -57,6 +60,10 @@ namespace Microsoft_Band_Simulator.SettingControls
             HRToggle.Background = new SolidColorBrush(devtheme);
             ToggleText.Text = "On";
             ToggleText.Foreground = new SolidColorBrush(Colors.White);
+            HealthUI.HRState = true;
+            DeviceSettings.HRSliderEnabled = true;
+            Band2.HRIcon = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart.png"));
+            IsToggleOnS5 = true;
         }
 
         private void HRToggle_Unchecked(object sender, RoutedEventArgs e)
@@ -64,6 +71,9 @@ namespace Microsoft_Band_Simulator.SettingControls
             HRToggle.Background = new SolidColorBrush(Color.FromArgb(100, 56, 52, 52));
             ToggleText.Text = "Off";
             ToggleText.Foreground = new SolidColorBrush(Colors.DarkGray);
+            HealthUI.HRState = false;
+            DeviceSettings.HRSliderEnabled = false;
+            Band2.HRIcon = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart_dark.png"));
         }
     }
 }

@@ -18,15 +18,25 @@
         <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-50,0,0"/>
         <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" CornerRadius="25" Click="BackButton_Click"/>
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Healthview" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Loaded="Healthview_Loaded" Margin="60,0,0,0">
-            <Grid Margin="0,0,0,0" Width="2000">
+            <Grid Margin="0,0,0,0" Width="2970">
                 <TextBlock Text="Steps" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60,60,0,0" />
                 <TextBlock Text="&#xE008;" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" Margin="20,70,0,0"/>
-                <TextBlock Text="10,001" FontWeight="Thin" FontSize="105" Margin="20,90,0,0"/>
-                <TextBlock Text="Miles" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="660,60,0,0"/>
-                <TextBlock Text="&#xE030;" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" Margin="600,70,0,0"/>
-                <TextBlock Text="10.00" FontWeight="Thin" FontSize="105" Margin="600,90,0,0"/>
-                <TextBlock Text="Calories" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="600,60,0,0"/>
-                <TextBlock Text="&#xE009;" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" Margin="440,70,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="10,001" x:Name="StepsCount" FontWeight="Thin" FontSize="105" Margin="20,90,0,0"/>
+                <TextBlock Text="Miles" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="680,60,0,0"/>
+                <TextBlock Text="&#xE030;" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" Margin="620,70,0,0"/>
+                <TextBlock Text="10.00" x:Name="MilesCount" FontWeight="Thin" FontSize="105" Margin="620,90,0,0"/>
+                <TextBlock Text="Calories" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1180,60,0,0"/>
+                <TextBlock Text="&#xE009;" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" Margin="1145,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="1400" x:Name="CaloriesCount" FontWeight="Thin" FontSize="105" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1140,90,0,0"/>
+                <TextBlock Text="Flights" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1750,60,0,0"/>
+                <TextBlock Text="&#xE181;" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" Margin="1710,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="10" x:Name="FlightsCount" FontSize="105" FontWeight="Thin" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1710,90,0,0"/>
+                <TextBlock Text="&#xE007;" x:Name="HROffIcon" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2370,20,0,0" Foreground="DarkGray" Visibility="Collapsed"/>
+                <TextBlock Text="Heart Rate Off" x:Name="HROffLabel" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2410,10,0,0" Visibility="Collapsed"/>
+                <TextBlock Text="Turn on sensor in settings." x:Name="HROffDesc" FontSize="45" FontWeight="SemiLight" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2370,70,0,0" Width="300" TextWrapping="WrapWholeWords" Visibility="Collapsed"/>
+                <TextBlock Text="Locked" FontSize="35" x:Name="HRLock" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2410,60,0,0"/>
+                <TextBlock Text="&#xE006;" x:Name="HROnIcon" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2370,70,0,0" FontFamily="{ThemeResource KSymbolFontFamily}"/>
+                <TextBlock Text="100" x:Name="HRValueText" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2370,90,0,0" FontSize="105" FontWeight="Thin"/>
             </Grid>
         </ScrollViewer>
     </Grid>

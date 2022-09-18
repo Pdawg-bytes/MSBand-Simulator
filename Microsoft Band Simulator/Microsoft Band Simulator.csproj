@@ -218,6 +218,7 @@
     <Content Include="Assets\Icons\finance.png" />
     <Content Include="Assets\Icons\guidedworkouts.png" />
     <Content Include="Assets\Icons\heart.png" />
+    <Content Include="Assets\Icons\heart_dark.png" />
     <Content Include="Assets\Icons\lync.png" />
     <Content Include="Assets\Icons\messaging.png" />
     <Content Include="Assets\Icons\notificationcenter.png" />

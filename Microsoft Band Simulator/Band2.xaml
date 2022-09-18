@@ -22,6 +22,7 @@
                     </ProgressBar.RenderTransform>
                 </ProgressBar>
                 <Image Source="ms-appx:///Assets/Icons/battery.png" HorizontalAlignment="Left" Margin="13,26.5,0,184" Width="21" Height="90"/>
+                <Image x:Name="HRBandIcon" HorizontalAlignment="Left" Margin="9,-50,0,0" Width="30"/>
                 <Image VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Height="260" Margin="45,0,0,0" x:Name="HomeWall"/>
                 <TextBlock FontSize="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,5,0,0" Height="250" Width="480" x:Name="ClockTime"/>
                 <TextBlock FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="560,105,0,0" x:Name="DayName"/>
@@ -39,7 +40,7 @@
                 <Button x:Name="AlarmOpen" Height="261" Width="216" Margin="923,0,0,0" Opacity="0" Click="AlarmOpen_Click"/>
                 <Button x:Name="SleepOpen" Height="261" Width="206" Margin="1144,0,0,0" Opacity="0" Click="SleepOpen_Click"/>
                 <Button x:Name="SettingOpen" Height="261" Width="215" Margin="1356,0,0,0" Opacity="0" Click="SettingOpen_Click"/>
-                <Button x:Name="HealthHomeOpen" HorizontalAlignment="Left" VerticalAlignment="Center" Height="261" Width="672" Margin="45,0,0,0" Click="HealthHomeOpen_Click"/>
+                <Button x:Name="HealthHomeOpen" Opacity="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="261" Width="672" Margin="45,0,0,0" Click="HealthHomeOpen_Click"/>
             </Grid>
         </ScrollViewer>
     </Grid>

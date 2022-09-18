@@ -33,10 +33,31 @@ namespace Microsoft_Band_Simulator
         }
 
         public static Color devtheme;
+        public static bool HRState;
+        public static int HRVal;
 
         private void Healthview_Loaded(object sender, RoutedEventArgs e)
         {
             HealthUISidebar.Fill = new SolidColorBrush(devtheme);
+            if (HRState == true)
+            {
+                HROnIcon.Visibility = Visibility.Visible;
+                HRValueText.Visibility = Visibility.Visible;
+                HRValueText.Text = HRVal.ToString();
+                HRLock.Visibility = Visibility.Visible;
+                HROffDesc.Visibility = Visibility.Collapsed;
+                HROffIcon.Visibility = Visibility.Collapsed;
+                HROffLabel.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                HROnIcon.Visibility = Visibility.Collapsed;
+                HRValueText.Visibility = Visibility.Collapsed;
+                HRLock.Visibility = Visibility.Collapsed;
+                HROffDesc.Visibility = Visibility.Visible;
+                HROffIcon.Visibility = Visibility.Visible;
+                HROffLabel.Visibility = Visibility.Visible;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
