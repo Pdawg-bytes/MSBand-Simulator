@@ -253,6 +253,7 @@ namespace Microsoft_Band_Simulator
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
+            System.GC.Collect;
         }
 
 
