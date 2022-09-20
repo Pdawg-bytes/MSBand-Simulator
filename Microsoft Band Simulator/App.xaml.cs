@@ -91,7 +91,9 @@ namespace Microsoft_Band_Simulator
                 Band2.HRIcon = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart_dark.png"));
                 Setting5.IsToggleOnS5 = false;
                 HealthUI.HRVal = 75;
-                HealthUI.StepCount = "0";
+                HealthUI.StepCount = 0;
+                HealthUI.MileCount = 0.00;
+                HealthUI.CalCount = 0;
                 DeviceSettings.HRSliderEnabled = false;
                 DeviceSettings.BatSliderCache = 100;
                 DeviceSettings.NameCache = "Band 2";

@@ -52,7 +52,7 @@
             </ComboBox>
             <TextBlock Text="Wallpaper Preview" Height="20" Width="115" Margin="-164,35,0,0"/>
             <Image Height="100" x:Name="PreviewImage" Width="265" Margin="-15,5,0,0"/>
-            <TextBox Header="Enter the step count" Margin="0,30,0,0" x:Name="StepsBox" PlaceholderText="Insert a number from 0 - 20,000" />
+            <Slider Header="Set the step count (0 - 20,000)" Margin="0,40,0,0" x:Name="StepsSlider" Minimum="0" Maximum="20000" ValueChanged="StepsSlider_ValueChanged"/>
         </StackPanel>
         <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="20"/>
     </Grid>

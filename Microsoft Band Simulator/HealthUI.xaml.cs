@@ -35,7 +35,9 @@ namespace Microsoft_Band_Simulator
         public static Color devtheme;
         public static bool HRState;
         public static int HRVal;
-        public static string StepCount;
+        public static double StepCount;
+        public static double MileCount;
+        public static double CalCount;
 
         private void Healthview_Loaded(object sender, RoutedEventArgs e)
         {
@@ -59,7 +61,9 @@ namespace Microsoft_Band_Simulator
                 HROffIcon.Visibility = Visibility.Visible;
                 HROffLabel.Visibility = Visibility.Visible;
             }
-            StepsCount.Text = StepCount;
+            StepsCount.Text = StepCount.ToString();
+            MilesCount.Text = MileCount.ToString();
+            CaloriesCount.Text = CalCount.ToString();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

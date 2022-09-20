@@ -41,6 +41,9 @@ namespace Microsoft_Band_Simulator
         public static string NameCache;
         public static int HrSliderCache;
         public static bool HRSliderEnabled;
+        public static double StepSliderCache;
+        public const double MilePerStep = 0.0005;
+        public const double CalPerStep = 0.04;
 
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -253,7 +256,6 @@ namespace Microsoft_Band_Simulator
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
-            System.GC.Collect;
         }
 
 
@@ -677,6 +679,16 @@ namespace Microsoft_Band_Simulator
             BatteryPercentSet.Value = BatSliderCache;
             HeartRateSet.Value = HrSliderCache;
             HeartRateSet.IsEnabled = HRSliderEnabled;
+            StepsSlider.Value = StepSliderCache;
+            MainPage.ResTeachOpen = false;
+        }
+
+        private void StepsSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            HealthUI.StepCount = StepsSlider.Value;
+            StepSliderCache = StepsSlider.Value;
+            Math.Round(HealthUI.MileCount = HealthUI.StepCount * MilePerStep, 10);
+            Math.Truncate(HealthUI.CalCount = HealthUI.StepCount * CalPerStep);
         }
     }
 }
