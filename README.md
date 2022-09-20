@@ -7,6 +7,10 @@ To build this app, you need the Windows10SDK 19041 installed and UWP support in 
 # Installing
 Installing this app is quite simple. You need to first install the certificate in the zip folder to Local Machine > Trusted People. Now why do you need to do this, you may ask? Well that's because the UWP container needs the app to be launched by the shell correctly, and the certificate is a code signing measure. Anyway, after installing the certificate, double click the .APPX file, then click "Install". That should let you install and run the app! Enjoy!
 
+# Tools used for this app
+
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
 # Screenshots
 ![image](https://user-images.githubusercontent.com/83825746/190881357-85df94f4-6646-4abf-98ae-9dc6c2cb9721.png)
 ![image](https://user-images.githubusercontent.com/83825746/190881366-20f7bfee-d371-4046-b2ce-301c00f14312.png)
