@@ -687,8 +687,8 @@ namespace Microsoft_Band_Simulator
         {
             HealthUI.StepCount = StepsSlider.Value;
             StepSliderCache = StepsSlider.Value;
-            Math.Round(HealthUI.MileCount = HealthUI.StepCount * MilePerStep, 10);
-            Math.Truncate(HealthUI.CalCount = HealthUI.StepCount * CalPerStep);
+            HealthUI.MileCount = Math.Round(HealthUI.StepCount * MilePerStep, 2);
+            HealthUI.CalCount = Convert.ToInt32(HealthUI.StepCount * CalPerStep);
         }
     }
 }

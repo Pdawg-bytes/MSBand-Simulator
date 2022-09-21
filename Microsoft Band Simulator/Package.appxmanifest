@@ -9,7 +9,7 @@
   <Identity
     Name="5f6719b8-b386-40db-98c4-ae6dca1f6006"
     Publisher="CN=Pdawg Studios"
-    Version="1.0.1.0" />
+    Version="1.1.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="5f6719b8-b386-40db-98c4-ae6dca1f6006" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
