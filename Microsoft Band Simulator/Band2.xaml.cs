@@ -51,6 +51,7 @@ namespace Microsoft_Band_Simulator
         public static string time;
         public static string day;
         public static string dayname;
+        public static bool IsBTEnabled;
 
         // Clock update
         private void Timer_Tick(object sender, object e)
@@ -73,9 +74,17 @@ namespace Microsoft_Band_Simulator
             // Setting battery value at launch
             batteryPercent.Value = battery;
             // Obsolete method, but is used in MSDocs. Okay to use here.
-#pragma warning disable CS0618 // Type or member is obsolete
+            #pragma warning disable CS0618 // Type or member is obsolete
             Band2view.ScrollToHorizontalOffset(offset: 45);
             #pragma warning restore CS0618 // Type or member is obsolete
+            if (IsBTEnabled == true)
+            {
+                BTIcon.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BTIcon.Visibility = Visibility.Collapsed;
+            }
         }
 
         private async void Band2view_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)

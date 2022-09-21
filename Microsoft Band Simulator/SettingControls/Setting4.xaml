@@ -20,7 +20,7 @@
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting1view" VerticalScrollMode="Disabled" HorizontalScrollMode="Disabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting4view_Loaded">
             <Grid Margin="0,0,0,0" Width="1400">
                 <TextBlock x:Name="BTLabel" Text="Bluetooth" Margin="30,10,0,0" FontSize="60" Height="70" Width="440" VerticalAlignment="Top" HorizontalAlignment="Left" IsColorFontEnabled="True"/>
-                <ComboBox x:Name="BTCombo" PlaceholderText="Off" Margin="30,130,0,0" Width="440" Height="80" FontSize="40" MaxDropDownHeight="30">
+                <ComboBox x:Name="BTCombo" PlaceholderText="Off" Margin="30,130,0,0" Width="440" Height="80" FontSize="40" MaxDropDownHeight="30" SelectionChanged="BTCombo_SelectionChanged">
                     <x:String>Pairing</x:String>
                     <x:String>Off</x:String>
                     <x:String>On</x:String>

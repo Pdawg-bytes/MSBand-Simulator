@@ -38,6 +38,7 @@ namespace Microsoft_Band_Simulator
         public static double StepCount;
         public static double MileCount;
         public static double CalCount;
+        public static int FlightCount;
 
         private void Healthview_Loaded(object sender, RoutedEventArgs e)
         {
@@ -64,6 +65,7 @@ namespace Microsoft_Band_Simulator
             StepsCount.Text = StepCount.ToString();
             MilesCount.Text = MileCount.ToString();
             CaloriesCount.Text = CalCount.ToString();
+            FlightsCount.Text = FlightCount.ToString();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

@@ -42,6 +42,7 @@ namespace Microsoft_Band_Simulator
         public static int HrSliderCache;
         public static bool HRSliderEnabled;
         public static double StepSliderCache;
+        public static int FlightCache;
         public const double MilePerStep = 0.0005;
         public const double CalPerStep = 0.04;
 
@@ -680,6 +681,7 @@ namespace Microsoft_Band_Simulator
             HeartRateSet.Value = HrSliderCache;
             HeartRateSet.IsEnabled = HRSliderEnabled;
             StepsSlider.Value = StepSliderCache;
+            FlightSlider.Value = FlightCache;
             MainPage.ResTeachOpen = false;
         }
 
@@ -689,6 +691,12 @@ namespace Microsoft_Band_Simulator
             StepSliderCache = StepsSlider.Value;
             HealthUI.MileCount = Math.Round(HealthUI.StepCount * MilePerStep, 2);
             HealthUI.CalCount = Convert.ToInt32(HealthUI.StepCount * CalPerStep);
+        }
+
+        private void FlightSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            HealthUI.FlightCount = Convert.ToInt32(FlightSlider.Value);
+            FlightCache = Convert.ToInt32(FlightSlider.Value);
         }
     }
 }

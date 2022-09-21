@@ -89,9 +89,11 @@ namespace Microsoft_Band_Simulator
                 Band2.battery = 100;
                 Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_time.png"));
                 Band2.HRIcon = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart_dark.png"));
+                Band2.IsBTEnabled = false;
                 Setting5.IsToggleOnS5 = false;
                 HealthUI.HRVal = 75;
                 HealthUI.StepCount = 0;
+                HealthUI.FlightCount = 0;
                 HealthUI.MileCount = 0.00;
                 HealthUI.CalCount = 0;
                 DeviceSettings.HRSliderEnabled = false;

@@ -51,5 +51,23 @@ namespace Microsoft_Band_Simulator.SettingControls
             BTLabel.Foreground = new SolidColorBrush(devtheme);
             BTCombo.Background = new SolidColorBrush(Color.FromArgb(255, 102, 102, 102));
         }
+
+        private void BTCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string BTEn = e.AddedItems[0].ToString();
+            switch (BTEn)
+            {
+                case "Off":
+                default:
+                    Band2.IsBTEnabled = false;
+                    break;
+                case "On":
+                    Band2.IsBTEnabled = true;
+                    break;
+                case "Pairing":
+                    Band2.IsBTEnabled = true;
+                    break;
+            }
+        }
     }
 }
