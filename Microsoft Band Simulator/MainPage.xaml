@@ -14,10 +14,9 @@
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel>
-            <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
-            <Image Source="ms-appx:///Assets/bandiconshadow.png" Height="60" Width="60" Margin="0,-35,0,0"/>
-        </StackPanel>
+            <TextBlock Text="&#xE197;" FontFamily="{ThemeResource KSymbolFontFamily}" FontSize="35" Margin="15,8,0,0"/>
+            <TextBlock Text="Microsoft Band Simulator" Margin="55,13,0,0" Width="160" HorizontalAlignment="Left"/>
+            <Image Source="ms-appx:///Assets/bandiconshadow.png" Height="60" Width="60" Margin="0,0,0,0"/>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <Image Source="ms-appx:///Assets/band2cropped.svg" Height="406" Margin="4,13,0,0"/>
         </StackPanel>
