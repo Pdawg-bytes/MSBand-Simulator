@@ -19,7 +19,7 @@
             <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
             <Image Source="ms-appx:///Assets/bandiconshadow.png" Height="60" Width="60" Margin="0,-35,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,420">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,0">
             <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  Header="Select the device theme" PlaceholderText="Theme" Width="200" x:Name="ThemeComboBox" ToolTipService.ToolTip="Change the theme on the Band">
                 <x:String>Microsoft Blue</x:String>
                 <x:String>Dark Cyan</x:String>
@@ -36,8 +36,9 @@
             <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
             <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
             <Slider x:Name="HeartRateSet" Header="Set the heart rate" Margin="0,30,0,0" ValueChanged="HeartRateSet_ValueChanged"/>
+            <Slider Header="Set the flights of stairs climbed (0 - 100)" x:Name="FlightSlider" Margin="0,30,0,0" ValueChanged="FlightSlider_ValueChanged"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="270,30,0,420" Width="280">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="350,30,0,0" Width="280">
             <ComboBox Header="Select the wallpaper" PlaceholderText="Wallpaper" Width="250" x:Name="WallpaperComboBox" ToolTipService.ToolTip="Change the theme synced wallpaper" SelectionChanged="WallpaperComboBox_SelectionChanged">
                 <x:String>Blank</x:String>
                 <x:String>Chevs</x:String>
@@ -53,7 +54,6 @@
             <TextBlock Text="Wallpaper Preview" Height="20" Width="115" Margin="-164,35,0,0"/>
             <Image Height="100" x:Name="PreviewImage" Width="265" Margin="-15,5,0,0"/>
             <Slider Header="Set the step count (0 - 20,000)" Margin="0,40,0,0" x:Name="StepsSlider" Minimum="0" Maximum="20000" ValueChanged="StepsSlider_ValueChanged"/>
-            <Slider Header="Set the flights of stairs climbed (0 - 100)" x:Name="FlightSlider" Margin="0,30,0,0" ValueChanged="FlightSlider_ValueChanged"/>
         </StackPanel>
         <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="20"/>
     </Grid>

@@ -70,7 +70,7 @@ namespace Microsoft_Band_Simulator
                 GetScreenResolutionInfo();
 
                 // Gets app version
-                GetAppVersion();
+                // GetAppVersion();
 
                 // Gets app arch
                 GetAppArch();
@@ -87,6 +87,7 @@ namespace Microsoft_Band_Simulator
                 SettingApp.devtheme = Colors.DeepSkyBlue;
                 HealthUI.devtheme = Colors.DeepSkyBlue;
                 Band2.battery = 100;
+                MainPage.batcompare = 100;
                 Band2.wallpaper = new BitmapImage(new Uri("ms-appx:///Assets/Wallpaper/electric_time.png"));
                 Band2.HRIcon = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart_dark.png"));
                 Band2.IsBTEnabled = false;
@@ -97,6 +98,7 @@ namespace Microsoft_Band_Simulator
                 HealthUI.MileCount = 0.00;
                 HealthUI.CalCount = 0;
                 DeviceSettings.HRSliderEnabled = false;
+                LowBattery.devtheme = Colors.DeepSkyBlue;
                 DeviceSettings.BatSliderCache = 100;
                 DeviceSettings.NameCache = "Band 2";
                 DeviceSettings.HrSliderCache = 75;
@@ -130,11 +132,11 @@ namespace Microsoft_Band_Simulator
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
 
-        private void GetAppVersion()
+        /*private void GetAppVersion()
         {
-            string AppVersionSTR = GetType().Assembly.GetName().Version.ToString();
+            private string AppVersionSTR => SystemInformation.Instance.ApplicationVersion.ToFormattedString();
             AboutDialog.AppVerDialog = AppVersionSTR;
-        }
+        }*/
 
         private void GetAppArch()
         {

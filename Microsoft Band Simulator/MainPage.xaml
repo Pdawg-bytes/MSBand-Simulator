@@ -43,8 +43,9 @@
             Background="{ThemeResource ElementAcrylicBrush}"
             CloseButtonStyle="{ThemeResource AccentButtonStyle}"
 	        PlacementMargin="14"
+            ActionButtonContent="Got it!"
+            ActionButtonClick="ResTeachingTip_ActionButtonClick"
 	        IsLightDismissEnabled="True"
-	        ActionButtonContent="Got it!"
 	        CloseButtonContent="Close">
         </muxc:TeachingTip>
         <Frame x:Name="Band2Frame" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="254" Width="686" Margin="0,0,0,0" MinHeight="254" MinWidth="686">

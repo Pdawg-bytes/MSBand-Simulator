@@ -31,11 +31,19 @@ namespace Microsoft_Band_Simulator
         }
 
         public static bool ResTeachOpen;
+        public static int batcompare;
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             // Inits frame and navigates to it in MainWindow
-            Band2Frame.Navigate(typeof(Band2), null, new SuppressNavigationTransitionInfo());
+            if (batcompare <= 15)
+            {
+                Band2Frame.Navigate(typeof(LowBattery), null, new SuppressNavigationTransitionInfo());
+            }
+            else
+            {
+                Band2Frame.Navigate(typeof(Band2), null, new SuppressNavigationTransitionInfo());
+            }
             Band2Frame.Visibility = Visibility.Visible;
             pwon.IsEnabled = false;
             NotificationButton.IsEnabled = true;
@@ -81,6 +89,11 @@ namespace Microsoft_Band_Simulator
         {
             AboutDialog dialog = new AboutDialog();
             await dialog.ShowAsync();
+        }
+
+        private void ResTeachingTip_ActionButtonClick(Microsoft.UI.Xaml.Controls.TeachingTip sender, object args)
+        {
+            ResTeachingTip.IsOpen = false;
         }
     }
 }

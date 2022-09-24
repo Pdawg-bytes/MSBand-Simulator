@@ -9,6 +9,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using Microsoft.Toolkit.Uwp.Helpers;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
@@ -29,8 +30,7 @@ namespace Microsoft_Band_Simulator
         {
             this.InitializeComponent();
         }
-
-        public static string AppVerDialog;
+        private string Version => SystemInformation.Instance.ApplicationVersion.ToFormattedString();
         public static string AppArchDialog;
 
         private void AboutCloseButton_Click(object sender, RoutedEventArgs e)
@@ -42,7 +42,6 @@ namespace Microsoft_Band_Simulator
         private void AboutDialogContent_Loaded(object sender, RoutedEventArgs e)
         {
             AppArchText.Text = AppArchDialog;
-            AppVerText.Text = "Application Version: " + AppVerDialog;
         }
     }
 }
