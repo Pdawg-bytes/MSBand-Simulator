@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83825746/192634967-b2061499-8227-4aa8-86a7-a5e805e36e74.png">
+</p>
+
 # MSBand-Simulator
 MSBand-Simulator is a fully open source simulator for the Microsoft Band's UI that allows for the user to demo the Microsoft Band products and also test basic functions like the music controller or the notfications. **Disclaimer:** This is NOT an emulator for the Band and it does NOT emulate the firmware. This is a full UI simulation in C# and XAML. This app is built in UWP with WinUI 2.1.
 
