@@ -2,11 +2,11 @@
   <img src="https://user-images.githubusercontent.com/83825746/192634967-b2061499-8227-4aa8-86a7-a5e805e36e74.png">
 </p>
 
-# MSBand-Simulator
-MSBand-Simulator is a fully open source simulator for the Microsoft Band's UI that allows for the user to demo the Microsoft Band products and also test basic functions like the music controller or the notfications. **Disclaimer:** This is NOT an emulator for the Band and it does NOT emulate the firmware. This is a full UI simulation in C# and XAML. This app is built in UWP with WinUI 2.1.
+# MSBand-Simulator Uno
+MSBand-Simulator Uno is a fully open source simulator for the Microsoft Band's UI that allows for the user to demo the Microsoft Band products and also test basic functions like the music controller or the notfications. **Disclaimer:** This is NOT an emulator for the Band and it does NOT emulate the firmware. This is a full UI simulation in C# and XAML. This app is built in Uno.
 
 # Building
-To build this app, you need the Windows10SDK 19041 installed and UWP support in Visual Studio 2022. That's all to build!
+To build this app, you need Uno support installed with Visual Studio 2022. That's all to build!
 
 # Installing
 Installing this app is quite simple. You need to first install the certificate in the zip folder to Local Machine > Trusted People. Now why do you need to do this, you may ask? Well that's because the UWP container needs the app to be launched by the shell correctly, and the certificate is a code signing measure. Anyway, after installing the certificate, double click the .APPX file, then click "Install". That should let you install and run the app! Enjoy!
