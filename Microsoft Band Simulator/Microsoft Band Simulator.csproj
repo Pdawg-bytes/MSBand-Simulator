@@ -125,38 +125,41 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AboutDialog.xaml.cs">
+    <Compile Include="Controls\AboutDialog.xaml.cs">
       <DependentUpon>AboutDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Band2.xaml.cs">
+    <Compile Include="Controls\Band2.xaml.cs">
       <DependentUpon>Band2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ClockApp.xaml.cs">
+    <Compile Include="Controls\ClockApp.xaml.cs">
       <DependentUpon>ClockApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MiniBand.xaml.cs">
+      <DependentUpon>MiniBand.xaml</DependentUpon>
     </Compile>
     <Compile Include="DeviceSettings.xaml.cs">
       <DependentUpon>DeviceSettings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HealthUI.xaml.cs">
+    <Compile Include="Controls\HealthUI.xaml.cs">
       <DependentUpon>HealthUI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LowBattery.xaml.cs">
+    <Compile Include="Controls\LowBattery.xaml.cs">
       <DependentUpon>LowBattery.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NewNotificationDialog.xaml.cs">
+    <Compile Include="Controls\NewNotificationDialog.xaml.cs">
       <DependentUpon>NewNotificationDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NotificationTemplate.xaml.cs">
+    <Compile Include="Controls\NotificationTemplate.xaml.cs">
       <DependentUpon>NotificationTemplate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingApp.xaml.cs">
+    <Compile Include="Controls\SettingApp.xaml.cs">
       <DependentUpon>SettingApp.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingControls\Setting1.xaml.cs">
@@ -180,10 +183,10 @@
     <Compile Include="SettingControls\Setting7.xaml.cs">
       <DependentUpon>Setting7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SleepApp.xaml.cs">
+    <Compile Include="Controls\SleepApp.xaml.cs">
       <DependentUpon>SleepApp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UV.xaml.cs">
+    <Compile Include="Controls\UV.xaml.cs">
       <DependentUpon>UV.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -481,15 +484,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AboutDialog.xaml">
+    <Page Include="Controls\AboutDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Band2.xaml">
+    <Page Include="Controls\Band2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ClockApp.xaml">
+    <Page Include="Controls\ClockApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MiniBand.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -497,11 +504,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HealthUI.xaml">
+    <Page Include="Controls\HealthUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LowBattery.xaml">
+    <Page Include="Controls\LowBattery.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -509,15 +516,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="NewNotificationDialog.xaml">
+    <Page Include="Controls\NewNotificationDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NotificationTemplate.xaml">
+    <Page Include="Controls\NotificationTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingApp.xaml">
+    <Page Include="Controls\SettingApp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -549,11 +556,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SleepApp.xaml">
+    <Page Include="Controls\SleepApp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UV.xaml">
+    <Page Include="Controls\UV.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -15,8 +15,13 @@ using System.Diagnostics;
 using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
 using Windows.UI;
+using Microsoft_Band_Simulator.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Microsoft_Band_Simulator;
+using Windows.UI.WindowManagement;
+using Windows.UI.Xaml.Hosting;
+using System.Text;
+using Windows.UI.ViewManagement;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -94,6 +99,14 @@ namespace Microsoft_Band_Simulator
         private void ResTeachingTip_ActionButtonClick(Microsoft.UI.Xaml.Controls.TeachingTip sender, object args)
         {
             ResTeachingTip.IsOpen = false;
+        }
+
+        private async void ClockMode_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MiniBand), null, new DrillInNavigationTransitionInfo());
+            var preferences = ViewModePreferences.CreateDefault(ApplicationViewMode.CompactOverlay);
+            preferences.CustomSize = new Windows.Foundation.Size(684, 256);
+            bool success = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.CompactOverlay, preferences);
         }
     }
 }

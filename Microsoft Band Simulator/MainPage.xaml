@@ -30,6 +30,7 @@
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7E7;"/>
                 </AppBarButton.Icon>
             </AppBarButton>
+            <AppBarButton Label="Clock Mode" ToolTipService.ToolTip="Spawns a mini Microsoft Band window with only the clock implemented." Icon="Clock" x:Name="ClockMode" Click="ClockMode_Click"/>
             <CommandBar.SecondaryCommands>
                 <AppBarButton Label="About" x:Name="AboutButton" Click="AboutButton_Click"/>
             </CommandBar.SecondaryCommands>

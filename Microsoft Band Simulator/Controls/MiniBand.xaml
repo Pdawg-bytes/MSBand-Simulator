@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Microsoft_Band_Simulator.Controls.MiniBand"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft_Band_Simulator.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    MinHeight="256"
+    MinWidth="684"
+    MaxHeight="256"
+    MaxWidth="684"
+    >
+
+    <Grid>
+        <Grid x:Name="ClockGrid">
+            <Image Source="ms-appx:///Assets/Wallpaper/cyber_noods.png" Height="256" Width="684" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="210" Width="380" Margin="20,0,0,0" x:Name="ClockTime" Text="06:40" Foreground="White"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="20,30">
+                    <TextBlock FontSize="35" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="DayName" Text="Tue" Foreground="White"/>
+                    <TextBlock FontSize="35" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="Date" Text="24" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Transparent" Margin="5" x:Name="MiniBack" Click="MiniBack_Click">
+                <Button.Content>
+                    <FontIcon Glyph="&#xE72B;"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
