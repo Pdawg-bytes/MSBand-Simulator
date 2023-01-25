@@ -8,26 +8,29 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     MinHeight="256"
-    MinWidth="684"
+    MinWidth="504"
     MaxHeight="256"
-    MaxWidth="684"
+    MaxWidth="504"
     >
 
     <Grid>
         <Grid x:Name="ClockGrid">
-            <Image Source="ms-appx:///Assets/Wallpaper/cyber_noods.png" Height="256" Width="684" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Image Source="ms-appx:///Assets/Wallpaper/cyber_noods.png" Height="256" Width="684" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="WallpaperImage"/>
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="210" Width="380" Margin="20,0,0,0" x:Name="ClockTime" Text="06:40" Foreground="White"/>
-                <StackPanel VerticalAlignment="Bottom" Margin="20,30">
+                <TextBlock FontSize="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="210" Width="380" Margin="20,0,0,26" x:Name="ClockTime" Text="06:40" Foreground="White"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="10,0,0,56">
                     <TextBlock FontSize="35" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="DayName" Text="Tue" Foreground="White"/>
                     <TextBlock FontSize="35" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="Date" Text="24" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
-            <Button Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Transparent" Margin="5" x:Name="MiniBack" Click="MiniBack_Click">
+            <Button Height="42" Width="42" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Transparent" Margin="-5" x:Name="MiniBack" Click="MiniBack_Click" ToolTipService.ToolTip="Back to simulator">
                 <Button.Content>
-                    <FontIcon Glyph="&#xE72B;"/>
+                    <FontIcon Glyph="&#xE72B;" Foreground="White" FontSize="18" FontWeight="Thin" Opacity="0.4"/>
                 </Button.Content>
             </Button>
         </Grid>
+        <Grid x:Name="MiniTitleBar" Height="32" VerticalAlignment="Top">
+        </Grid>
+        <TextBlock Text="&#xE759;" FontFamily="Segoe MDL2 Assets" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,6,60,0" Opacity="0.4"/>
     </Grid>
 </Page>

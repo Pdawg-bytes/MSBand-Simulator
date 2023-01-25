@@ -24,6 +24,7 @@ using Microsoft_Band_Simulator.SettingControls;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Graphics.Display;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft_Band_Simulator.Controls;
 
 namespace Microsoft_Band_Simulator
 {
@@ -194,6 +195,9 @@ namespace Microsoft_Band_Simulator
             Band2.time = DateTime.Now.ToString("hh:mm");
             Band2.day = DateTime.Today.Day.ToString("00");
             Band2.dayname = DateTime.Now.ToString("ddd");
+            MiniBand.miniTime = DateTime.Now.ToString("hh:mm");
+            MiniBand.miniDay = DateTime.Today.Day.ToString("00");
+            MiniBand.miniDayName = DateTime.Now.ToString("ddd");
             NotificationTemplate.NotifTime = DateTime.Now.ToString("hh:mm tt");
             NotificationTemplate.NotifDate = DateTime.Now.ToString("MM/dd");
         }

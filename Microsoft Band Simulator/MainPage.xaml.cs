@@ -88,6 +88,7 @@ namespace Microsoft_Band_Simulator
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ResTeachingTip.IsOpen = ResTeachOpen;
+            Window.Current.SetTitleBar(null);
         }
 
         private async void AboutButton_Click(object sender, RoutedEventArgs e)
@@ -103,6 +104,7 @@ namespace Microsoft_Band_Simulator
 
         private async void ClockMode_Click(object sender, RoutedEventArgs e)
         {
+            // Thx ambie for the code!!
             this.Frame.Navigate(typeof(MiniBand), null, new DrillInNavigationTransitionInfo());
             var preferences = ViewModePreferences.CreateDefault(ApplicationViewMode.CompactOverlay);
             preferences.CustomSize = new Windows.Foundation.Size(684, 256);

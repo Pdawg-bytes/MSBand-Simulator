@@ -21,6 +21,10 @@ namespace Microsoft_Band_Simulator.Controls
 {
     public sealed partial class MiniBand : Page
     {
+        DispatcherTimer Timer = new DispatcherTimer();
+        public static string miniTime;
+        public static string miniDay;
+        public static string miniDayName;
         public MiniBand()
         {
             this.InitializeComponent();
@@ -28,17 +32,34 @@ namespace Microsoft_Band_Simulator.Controls
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
             Window.Current.SetTitleBar(MiniTitleBar);
+
+            WallpaperImage.Source = Band2.wallpaper;
+
+            Timer.Tick += Timer_Tick;
+            Timer.Interval = new TimeSpan(1000);
+            Timer.Start();
         }
         private async void SetupMini()
         {
             var preferences = ViewModePreferences.CreateDefault(ApplicationViewMode.CompactOverlay);
             preferences.CustomSize = new Windows.Foundation.Size(684, 256);
-            bool success = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.Default, preferences);
+            bool success = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.CompactOverlay, preferences);
         }
 
-        private void MiniBack_Click(object sender, RoutedEventArgs e)
+        private void Timer_Tick(object sender, object e)
         {
+            
+            ClockTime.Text = miniTime;
+            Date.Text = miniDay;
+            DayName.Text = miniDayName;
+        }
 
+        private async void MiniBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
+            var preferences = ViewModePreferences.CreateDefault(ApplicationViewMode.Default);
+            preferences.CustomSize = new Windows.Foundation.Size(1366, 768);
+            bool success = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.Default, preferences);
         }
     }
 }
