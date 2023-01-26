@@ -40,11 +40,8 @@ namespace Microsoft_Band_Simulator
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-            // Do not repeat app initialization when the Window already has content,
-            // just ensure that the window is active
             if (rootFrame == null)
             {
-                // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
@@ -53,8 +50,6 @@ namespace Microsoft_Band_Simulator
                 {
 
                 }
-
-                // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
 
@@ -64,22 +59,11 @@ namespace Microsoft_Band_Simulator
                 {
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
-                // Ensure the current window is active
                 Window.Current.Activate();
 
-                // Gets screen resoulution
                 GetScreenResolutionInfo();
-
-                // Gets app version
-                // GetAppVersion();
-
-                // Gets app arch
                 GetAppArch();
-
-                // Add acrylic to TitleBar
                 ExtendAcrylicIntoTitleBar();
-
-                // Setting defaults
                 Band2.devtheme = Colors.DeepSkyBlue;
                 UV.devtheme = Colors.DeepSkyBlue;
                 NotificationTemplate.devtheme = Colors.DeepSkyBlue;
@@ -132,12 +116,6 @@ namespace Microsoft_Band_Simulator
             titleBar.ButtonBackgroundColor = Colors.Transparent;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
-
-        /*private void GetAppVersion()
-        {
-            private string AppVersionSTR => SystemInformation.Instance.ApplicationVersion.ToFormattedString();
-            AboutDialog.AppVerDialog = AppVersionSTR;
-        }*/
 
         private void GetAppArch()
         {
